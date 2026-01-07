@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miniseri.id - Hiburan Dalam Genggaman</title>
+    <title>Miniseri | Platform Video Potret</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="miniseri.png">
     <style>
         body { font-family: 'Inter', sans-serif; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
@@ -22,13 +23,14 @@
         </div>
         <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
             <a href="#" class="hover:text-pink-500 transition">HOME</a>
-            <a href="#" class="hover:text-pink-500 transition">TENTANG KAMI</a>
+            <a href="#tentangKami" class="hover:text-pink-500 transition">TENTANG KAMI</a>
             <a href="#" class="hover:text-pink-500 transition">SYARAT KETENTUAN</a>
             <a href="#" class="hover:text-pink-500 transition">FAQ</a>
             <a href="#" class="hover:text-pink-500 transition">DAFTAR SINEAS</a>
             <a href="#" class="hover:text-pink-500 transition">KONTAK</a>
         </div>
-        <button class="px-6 py-2 bg-pink-600 hover:bg-pink-700 rounded-full text-sm font-bold transition">Buka Aplikasi</button>
+        <!-- <button class="px-6 py-2 bg-pink-600 hover:bg-pink-700 rounded-full text-sm font-bold transition">Buka Aplikasi</button> -->
+         <a href=""></a>
     </nav>
 
 <!-- <section class="relative min-h-screen bg-neutral-950 flex items-center pt-20 overflow-hidden">
@@ -81,8 +83,12 @@
                 <h1 class="text-6xl md:text-7xl font-extrabold leading-[1.1]">Serunya Nonton <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">Kapan Saja.</span></h1>
                 <p class="text-gray-400 text-lg max-w-md">Nikmati keseruan menonton miniseri favorit kapan saja dan di mana saja dengan aplikasi video potret kami. Temukan berbagai cerita menarik dalam format pendek yang mudah dinikmati di waktu luang Anda.</p>
                 <div class="flex gap-4 pt-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-12 cursor-pointer shadow-lg hover:opacity-80 transition" alt="Play Store">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="h-12 cursor-pointer shadow-lg hover:opacity-80 transition" alt="App Store">
+                    <a href="https://play.google.com/store/apps/details?id=id.miniseri.mobile">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-12 cursor-pointer shadow-lg hover:opacity-80 transition" alt="Play Store">
+                    </a>
+                    <a href="https://apps.apple.com/id/app/miniseri/id6575369357?l=id">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="h-12 cursor-pointer shadow-lg hover:opacity-80 transition" alt="App Store">
+                    </a>
                 </div>
             </div>
 
@@ -102,7 +108,7 @@
     <section class="py-24 px-6 container mx-auto">
         <div class="flex justify-between items-end mb-12">
             <div>
-                <h2 class="text-3xl font-bold mb-2">Paling Banyak Ditonton</h2>
+                <h2 class="text-3xl font-bold mb-2" id="tentangKami">Service We Provide</h2>
                 <div class="h-1 w-20 bg-pink-600 rounded-full"></div>
             </div>
             <a href="#" class="text-pink-500 font-semibold hover:underline">Lihat Semua</a>
@@ -129,9 +135,13 @@
             </div>
     </section>
 
+    <section class="py-24 px-6 container mx-auto">
+        <h4>123</h4>
+    </section>
+
     <footer class="py-12 border-t border-white/5 bg-[#050505]">
         <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
-            <p>© 2026 Miniseri.id. All rights reserved.</p>
+            <p>© 2026 Miniseri All rights reserved.</p>
         </div>
     </footer>
 
