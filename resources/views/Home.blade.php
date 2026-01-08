@@ -35,8 +35,8 @@
             <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
                 <a href="#" class="text-pink-500 menu-item">HOME</a>
                 <a href="#tentangKami" class="menu-item">TENTANG KAMI</a>
-                <a href="#" class="menu-item">SYARAT KETENTUAN</a>
-                <a href="#" class="menu-item">FAQ</a>
+                <a href="#syarat" class="menu-item">SYARAT KETENTUAN</a>
+                <a href="#faq" class="menu-item">FAQ</a>
                 <a href="#" class="menu-item">DAFTAR SINEAS</a>
                 <a href="#" class="menu-item">KONTAK</a>
             </div>
@@ -52,7 +52,7 @@
             <a href="#" class="hover:text-pink-500">HOME</a>
             <a href="#tentangKami" class="hover:text-pink-500">TENTANG KAMI</a>
             <a href="#syarat" class="hover:text-pink-500">SYARAT KETENTUAN</a>
-            <a href="#" class="hover:text-pink-500">FAQ</a>
+            <a href="#faq" class="hover:text-pink-500">FAQ</a>
             <a href="#" class="hover:text-pink-500">DAFTAR SINEAS</a>
             <a href="#" class="hover:text-pink-500">KONTAK</a>
         </div>
@@ -105,7 +105,7 @@
         <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-6">
                 <span class="px-4 py-1 bg-pink-600/20 text-pink-500 rounded-full text-xs font-bold tracking-widest uppercase">Streaming Video Pendek #1</span>
-                <h1 class="text-6xl md:text-7xl font-extrabold leading-[1.1]">Serunya Nonton <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">Kapan Saja.</span></h1>
+                <h1 class="text-6xl md:text-7xl font-extrabold leading-[1.1]">Serunya Nonton Miniseri <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">Kapan Saja.</span></h1>
                 <p class="text-gray-400 text-lg max-w-md">Nikmati keseruan menonton miniseri favorit kapan saja dan di mana saja dengan aplikasi video potret kami. Temukan berbagai cerita menarik dalam format pendek yang mudah dinikmati di waktu luang Anda.</p>
                 <div class="flex gap-4 pt-4">
                     <a href="https://play.google.com/store/apps/details?id=id.miniseri.mobile">
@@ -134,12 +134,12 @@
         <div class="container mx-auto relative z-10">
 
             <div class="text-center mb-16">
-                <p class="text-pink-500 font-bold tracking-widest uppercase text-sm mb-3">Layanan Kami</p>
+                <p class="text-pink-500 font-bold tracking-widest uppercase text-sm mb-3">Service We Provide</p>
                 <div class="h-1 w-24 bg-gradient-to-r from-pink-500 to-rose-600 mx-auto rounded-full mb-16"></div>
                 <h3 class="text-gray-400 max-w-2xl mx-auto text-3xl md:text-3xl font-semibold leading-relaxed mb-14">
                     PLATFORM VIDEO POTRAIT UNTUK MINI SERIES UNTUK SEMUA KALANGAN
                 </h3>
-                <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed text-lg">
+                <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
                     Miniseri.id adalah platform digital yang didedikasikan untuk film vertikal di Indonesia.
                     Menawarkan format unik dimana kisah diceritakan melalui klip pendek yang membentuk narasi lengkap.
                     Fokusnya adalah memberdayakan para pembuat film Indonesia dan menyediakan konten yang menarik bagi pemirsa.
@@ -211,6 +211,29 @@
 
     <section class="py-24 px-6 container mx-auto" id="syarat">
         
+    </section>
+
+    <section id="faq" class="py-24 px-6 bg-[#0a0a0a] relative overflow-hidden">
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <p class="text-pink-500 font-bold tracking-widest uppercase text-sm mb-3">Frequently Asked Question</p>
+                <div class="h-1 w-24 bg-gradient-to-r from-pink-500 to-rose-600 mx-auto rounded-full mb-16"></div>
+                <h3 class="text-gray-400 max-w-2xl mx-auto text-3xl md:text-3xl font-semibold leading-relaxed mb-14">
+                   PERTANYAAN YANG SERING DIAJUKAN
+                </h3>
+                <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                   Berikut adalah beberapa pertanyaan yang sering diajukan oleh pengguna sebelum menggunakan layanan kami. Jika Anda memiliki pertanyaan lain, jangan ragu untuk menghubungi kami.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="daftar-sineas">
+
+    </section>
+
+    <section id="kontak">
+
     </section>
 
     <footer class="py-12 border-t border-white/5 bg-[#050505]">
