@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_sineas');
+            $table->string('email')->unique();
+            $table->string('no_hp');
+            $table->enum('ketersediaan', ['ya', 'tidak']);
             $table->timestamps();
         });
     }

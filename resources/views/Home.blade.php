@@ -26,38 +26,7 @@
 </head>
 
 <body class="bg-[#0a0a0a] text-white overflow-x-hidden">
-    <nav class="fixed w-full z-50 glass top-0 px-6 py-4">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <img src="miniseri.png" class="w-3xs h-12">
-                <span class="text-xl font-extrabold tracking-tighter">MINISERI<span class="text-pink-500">.ID</span></span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
-                <a href="#" class="text-pink-500 menu-item">HOME</a>
-                <a href="#tentangKami" class="menu-item">TENTANG KAMI</a>
-                <a href="#syarat" class="menu-item">SYARAT KETENTUAN</a>
-                <a href="#faq" class="menu-item">FAQ</a>
-                <a href="#" class="menu-item">DAFTAR SINEAS</a>
-                <a href="#" class="menu-item">KONTAK</a>
-            </div>
-            <!-- <button class="px-6 py-2 bg-pink-600 hover:bg-pink-700 rounded-full text-sm font-bold transition">Buka Aplikasi</button> -->
-            <button id="burger" class="md:hidden flex flex-col gap-1">
-                <span class="w-6 h-0.5 bg-white"></span>
-                <span class="w-6 h-0.5 bg-white"></span>
-                <span class="w-6 h-0.5 bg-white"></span>
-            </button>
-        </div>
-
-        <div id="mobileMenu" class="hidden md:hidden mt-6 flex flex-col gap-4 text-sm font-medium text-gray-300" id="menu">
-            <a href="#" class="hover:text-pink-500">HOME</a>
-            <a href="#tentangKami" class="hover:text-pink-500">TENTANG KAMI</a>
-            <a href="#syarat" class="hover:text-pink-500">SYARAT KETENTUAN</a>
-            <a href="#faq" class="hover:text-pink-500">FAQ</a>
-            <a href="#" class="hover:text-pink-500">DAFTAR SINEAS</a>
-            <a href="#" class="hover:text-pink-500">KONTAK</a>
-        </div>
-    </nav>
-
+    @include('layout')
     <!-- <section class="relative min-h-screen bg-neutral-950 flex items-center pt-20 overflow-hidden">
     
     <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-pink-600/20 blur-[120px] rounded-full"></div>
@@ -210,7 +179,7 @@
         </div> -->
 
     <section class="py-24 px-6 container mx-auto" id="syarat">
-        
+
     </section>
 
     <section id="faq" class="py-24 px-6 bg-[#0a0a0a] relative overflow-hidden">
@@ -219,18 +188,103 @@
                 <p class="text-pink-500 font-bold tracking-widest uppercase text-sm mb-3">Frequently Asked Question</p>
                 <div class="h-1 w-24 bg-gradient-to-r from-pink-500 to-rose-600 mx-auto rounded-full mb-16"></div>
                 <h3 class="text-gray-400 max-w-2xl mx-auto text-3xl md:text-3xl font-semibold leading-relaxed mb-14">
-                   PERTANYAAN YANG SERING DIAJUKAN
+                    PERTANYAAN YANG SERING DIAJUKAN
                 </h3>
                 <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                   Berikut adalah beberapa pertanyaan yang sering diajukan oleh pengguna sebelum menggunakan layanan kami. Jika Anda memiliki pertanyaan lain, jangan ragu untuk menghubungi kami.
+                    Berikut adalah beberapa pertanyaan yang sering diajukan oleh pengguna sebelum menggunakan layanan kami. Jika Anda memiliki pertanyaan lain, jangan ragu untuk menghubungi kami.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="daftar-sineas">
+    <section id="daftar-sineas" x-data="{ open: false }" class="px-4">
+    <div class="container mx-auto flex justify-center">
+        <button
+            @click="open = true"
+            class="bg-black text-white px-4 py-2 rounded hover:bg-pink-600">
+            Daftar Sineas
+        </button>
+    </div>
 
-    </section>
+    <div
+        x-show="open"
+        x-cloak
+        @click.self="open = false"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+
+        <!-- Modal container -->
+        <div
+            class="bg-white w-full sm:w-auto max-w-xl rounded-2xl p-4 sm:p-6 
+                   overflow-y-auto max-h-[90vh]">
+
+            <!-- Close button -->
+            <button
+                @click="open = false"
+                class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl">
+                ✕
+            </button>
+
+            <h2 class="text-2xl font-bold mb-1 text-black">Daftar Sebagai Sineas</h2>
+            <p class="text-sm text-gray-500 mb-6">
+                Pendaftaran karya film untuk aplikasi miniseri.id
+            </p>
+
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1 text-gray-900">Nama Sineas</label>
+                    <input
+                        type="text"
+                        class="w-full bg-gray-100 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-1 text-gray-900">Email</label>
+                    <input
+                        type="email"
+                        class="w-full bg-gray-100 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-1 text-gray-900">No Hp</label>
+                    <input
+                        type="text"
+                        class="w-full bg-gray-100 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-1 text-gray-900">
+                        Bersedia mengedit film sesuai format miniseri.id
+                    </label>
+                    <select
+                        class="w-full bg-gray-100 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="">Pilih</option>
+                        <option value="ya">Ya</option>
+                        <option value="tidak">Tidak</option>
+                    </select>
+                    <p class="text-xs text-gray-400 mt-1">
+                        Vertical dan berdurasi 2–3 menit per clip
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-2 text-sm text-gray-600">
+                    <input type="checkbox" class="mt-1">
+                    <p>
+                        Dengan ini saya yang memiliki hak penuh atas kepemilikan karya,
+                        dengan sadar dan tanpa paksaan mendaftarkan karya saya untuk
+                        ditayangkan dan dipasarkan di platform miniseri.id
+                    </p>
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 rounded-full mt-4">
+                    DAFTAR SEKARANG
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
 
     <section id="kontak">
 
@@ -265,4 +319,6 @@
         });
     });
 </script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </html>
