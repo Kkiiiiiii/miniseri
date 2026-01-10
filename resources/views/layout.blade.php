@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 <style>/
+=======
+<style>
+    /* Custom CSS untuk Navbar */
+>>>>>>> f6bcbbc
     .navbar-glass {
         background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
+<<<<<<< HEAD
     
+=======
+    /* Warna default teks (Abu-abu) */
+>>>>>>> f6bcbbc
     .nav-link {
         color: #d1d5db !important;
         font-size: 0.875rem;
@@ -14,7 +23,11 @@
         position: relative;
     }
 
+<<<<<<< HEAD
    
+=======
+    /* Warna saat Hover */
+>>>>>>> f6bcbbc
     .nav-link:hover {
         color: #f472b6 !important; /* Pink muda */
     }

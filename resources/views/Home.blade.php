@@ -268,7 +268,11 @@
                Harap dibaca dengan cermat sebelum menggunakan layanan kami. Syarat dan ketentuan ini mengatur penggunaan website dan layanan yang disediakan oleh kami untuk memastikan pengalaman yang aman dan menyenangkan bagi semua pengguna.
             </p>
 
+<<<<<<< HEAD
                 <a href="{{ asset('assets/image/term') }}" class="btn btn-primary mt-3">
+=======
+                <a href="" class="btn btn-primary mt-3">
+>>>>>>> f6bcbbc
                     Daftar Sekarang
                 </a>
             </div>
