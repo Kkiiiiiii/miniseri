@@ -7,6 +7,7 @@
     <title>Miniseri | Platform Video Potret</title>
 
     <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ asset('assets/image/miniseri.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
     <style>
