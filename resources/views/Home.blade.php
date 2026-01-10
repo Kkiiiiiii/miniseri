@@ -7,6 +7,7 @@
     <title>Miniseri | Platform Video Potret</title>
 
     <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ asset('assets/image/miniseri.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
     <style>
@@ -267,7 +268,7 @@
                Harap dibaca dengan cermat sebelum menggunakan layanan kami. Syarat dan ketentuan ini mengatur penggunaan website dan layanan yang disediakan oleh kami untuk memastikan pengalaman yang aman dan menyenangkan bagi semua pengguna.
             </p>
 
-                <a href="{{  }}" class="btn btn-primary mt-3">
+                <a href="" class="btn btn-primary mt-3">
                     Daftar Sekarang
                 </a>
             </div>
