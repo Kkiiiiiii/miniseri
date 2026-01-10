@@ -1,58 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="miniseri.png">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+<style>
+    /* Custom CSS untuk Navbar */
+    .navbar-glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+    /* Warna default teks (Abu-abu) */
+    .nav-link {
+        color: #d1d5db !important;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+    }
 
-        .magenta-glow {
-            box-shadow: 0 0 50px -12px rgba(219, 39, 119, 0.5);
-        }
-    </style>
-</head>
-<body>
-    <nav class="fixed w-full z-50 glass top-0 px-6 py-4">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <img src="miniseri.png" class="w-3xs h-12">
-                <span class="text-xl font-extrabold tracking-tighter">MINISERI<span class="text-pink-500">.ID</span></span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
-                <a href="#" class="text-pink-500 menu-item">HOME</a>
-                <a href="#tentangKami" class="menu-item">TENTANG KAMI</a>
-                <a href="#syarat" class="menu-item">SYARAT KETENTUAN</a>
-                <a href="#faq" class="menu-item">FAQ</a>
-                <a href="#" class="menu-item">DAFTAR SINEAS</a>
-                <a href="#" class="menu-item">KONTAK</a>
-            </div>
-            <!-- <button class="px-6 py-2 bg-pink-600 hover:bg-pink-700 rounded-full text-sm font-bold transition">Buka Aplikasi</button> -->
-            <button id="burger" class="md:hidden flex flex-col gap-1">
-                <span class="w-6 h-0.5 bg-white"></span>
-                <span class="w-6 h-0.5 bg-white"></span>
-                <span class="w-6 h-0.5 bg-white"></span>
-            </button>
+    /* Warna saat Hover */
+    .nav-link:hover {
+        color: #f472b6 !important; /* Pink muda */
+    }
+
+    /* Warna saat ACTIVE (Sesuai permintaanmu) */
+    .nav-link.active {
+        color: #d63384 !important; /* Pink Magenta */
+        font-weight: 800;
+    }
+
+    .navbar-brand {
+        font-weight: 800;
+        letter-spacing: -0.05em;
+    }
+
+    .burger-line {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        margin: 4px 0;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+</style>
+
+<nav class="navbar navbar-expand-md fixed-top navbar-glass px-lg-4 py-3">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
+            <img src="miniseri.png" alt="Logo" height="40">
+            <span class="fs-4">MINISERI<span style="color: #d63384;">.ID</span></span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-lg-4 pt-3 pt-md-0 text-uppercase" id="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentangKami">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#syarat">Syarat Ketentuan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Daftar Sineas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+            </ul>
         </div>
+    </div>
+</nav>
 
-        <div id="mobileMenu" class="hidden md:hidden mt-6 flex flex-col gap-4 text-sm font-medium text-gray-300" id="menu">
-            <a href="#" class="hover:text-pink-500">HOME</a>
-            <a href="#tentangKami" class="hover:text-pink-500">TENTANG KAMI</a>
-            <a href="#syarat" class="hover:text-pink-500">SYARAT KETENTUAN</a>
-            <a href="#faq" class="hover:text-pink-500">FAQ</a>
-            <a href="#" class="hover:text-pink-500">DAFTAR SINEAS</a>
-            <a href="#" class="hover:text-pink-500">KONTAK</a>
-        </div>
-    </nav>
-</body>
-</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('#nav-menu .nav-link');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(btn => btn.classList.remove('active'));
+                
+                this.classList.add('active');
+
+                // (Opsional) Tutup menu mobile otomatis setelah klik (untuk UX yang lebih baik)
+                if (window.innerWidth < 768) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+    });
+</script>

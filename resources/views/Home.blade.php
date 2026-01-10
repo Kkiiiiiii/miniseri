@@ -1,324 +1,302 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miniseri | Platform Video Potret</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="miniseri.png">
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            overflow-x: hidden;
         }
 
-        .glass {
+        /* Custom Utilities untuk kemiripan dengan Tailwind */
+        .text-magenta-gradient {
+            background: linear-gradient(to right, #d63384, #ff758f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 2rem;
+            transition: all 0.3s ease;
         }
 
-        .magenta-glow {
-            box-shadow: 0 0 50px -12px rgba(219, 39, 119, 0.5);
+        .glass-card:hover {
+            border-color: rgba(214, 51, 132, 0.5);
+            transform: translateY(-5px);
         }
+
+        .bg-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(214, 51, 132, 0.1);
+            filter: blur(120px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        /* Phone Frame Styling */
+        .phone-mockup {
+            width: 280px;
+            height: 580px;
+            background: #171717;
+            border-radius: 3rem;
+            border: 8px solid #262626;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            outline: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .badge-pink {
+            background: rgba(214, 51, 132, 0.2);
+            color: #d63384;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
+        .btn-pink {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-pink:hover {
+            background-color: #b02a6a;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Modal Customization */
+        .modal-content {
+            border-radius: 1.5rem;
+            border: none;
+        }
+
+        
     </style>
 </head>
 
-<body class="bg-[#0a0a0a] text-white overflow-x-hidden">
+<body>
+    @if (session('success'))
+<!-- Modal -->
+<div class="modal fade" id="successModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+
+      <!-- Icon -->
+      <div class="mb-3">
+        <div class="rounded-circle border border-success d-inline-flex align-items-center justify-content-center"
+             style="width:90px;height:90px;">
+          <svg width="40" height="40" fill="none" stroke="green" stroke-width="3" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h3 class="fw-bold">Yay!</h3>
+
+      <!-- Message -->
+      <p class="text-muted">
+        {{ session('success') }}
+      </p>
+
+      <!-- Button -->
+      <button class="btn btn-primary px-4" data-bs-dismiss="modal">
+        OK
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      var successModal = new bootstrap.Modal(
+          document.getElementById('successModal')
+      );
+      successModal.show();
+  });
+</script>
+@endif
+
     @include('layout')
-    <!-- <section class="relative min-h-screen bg-neutral-950 flex items-center pt-20 overflow-hidden">
+   <section class="position-relative d-flex align-items-center min-vh-100 px-3 pt-5">
+    <div class="bg-glow top-0 end-0"></div>
     
-    <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-pink-600/20 blur-[120px] rounded-full"></div>
-
-    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-        
-        <div class="space-y-8">
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">
-                Hiburan Berkelas dalam <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">Genggaman.</span>
-            </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-lg leading-relaxed">
-                Nikmati ribuan miniseri eksklusif dengan format video potret terbaik. Dirancang khusus untuk kenyamanan menonton di waktu luang Anda.
-            </div>
-
-            <div class="flex flex-wrap gap-4">
-                <a href="#" class="px-8 py-4 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded-full transition duration-300 transform hover:scale-105 shadow-lg shadow-pink-600/20">
-                    Mulai Nonton Gratis
-                </a>
-                
-                <div class="flex gap-3 items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" class="h-10">
-                </div>
-            </div>
-        </div>
-
-        <div class="relative flex justify-center">
-            <div class="absolute inset-0 bg-gradient-to-tr from-pink-500/10 to-transparent rounded-full blur-3xl scale-75"></div>
+    <div class="container py-5">
+        <div class="row align-items-center gy-4">
             
-            <div class="relative w-[280px] h-[580px] bg-neutral-900 rounded-[3rem] border-[8px] border-neutral-800 shadow-2xl overflow-hidden ring-4 ring-white/5">
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://via.placeholder.com/1080x1920/1a1a1a/e91e63?text=Preview+Video');">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20">
-                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30">
-                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[15px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    </section> -->
-    <section class="relative min-h-screen flex items-center px-6 pt-20">
-        <div class="absolute top-20 right-0 w-[500px] h-[500px] bg-pink-600/10 blur-[120px] rounded-full -z-10"></div>
-
-        <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
-                <span class="px-4 py-1 bg-pink-600/20 text-pink-500 rounded-full text-xs font-bold tracking-widest uppercase">Streaming Video Pendek #1</span>
-                <h1 class="text-6xl md:text-7xl font-extrabold leading-[1.1]">Serunya Nonton Miniseri <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">Kapan Saja.</span></h1>
-                <p class="text-gray-400 text-lg max-w-md">Nikmati keseruan menonton miniseri favorit kapan saja dan di mana saja dengan aplikasi video potret kami. Temukan berbagai cerita menarik dalam format pendek yang mudah dinikmati di waktu luang Anda.</p>
-                <div class="flex gap-4 pt-4">
-                    <a href="https://play.google.com/store/apps/details?id=id.miniseri.mobile">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-12 cursor-pointer shadow-lg hover:opacity-80 transition" alt="Play Store">
-                    </a>
-                    <a href="https://apps.apple.com/id/app/miniseri/id6575369357?l=id">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="h-12 cursor-pointer shadow-lg hover:opacity-80 transition" alt="App Store">
-                    </a>
-                </div>
-            </div>
-
-            <div class="relative flex justify-center">
-                <div class="w-[280px] h-[580px] bg-neutral-900 rounded-[3rem] border-[8px] border-neutral-800 shadow-2xl relative z-10 overflow-hidden ring-1 ring-white/10">
-                    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-80" alt="App Preview">
-                    <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black via-transparent">
-                        <p class="text-xs font-bold text-pink-500">Episode 05</p>
-                        <h3 class="text-xl font-bold">Cinta di Balik Layar</h3>
-                    </div>
-                </div>
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[500px] bg-pink-600/30 blur-[80px]"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tentangKami" class="py-24 px-6 bg-[#0a0a0a] relative overflow-hidden">
-        <div class="container mx-auto relative z-10">
-
-            <div class="text-center mb-16">
-                <p class="text-pink-500 font-bold tracking-widest uppercase text-sm mb-3">Service We Provide</p>
-                <div class="h-1 w-24 bg-gradient-to-r from-pink-500 to-rose-600 mx-auto rounded-full mb-16"></div>
-                <h3 class="text-gray-400 max-w-2xl mx-auto text-3xl md:text-3xl font-semibold leading-relaxed mb-14">
-                    PLATFORM VIDEO POTRAIT UNTUK MINI SERIES UNTUK SEMUA KALANGAN
-                </h3>
-                <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                    Miniseri.id adalah platform digital yang didedikasikan untuk film vertikal di Indonesia.
-                    Menawarkan format unik dimana kisah diceritakan melalui klip pendek yang membentuk narasi lengkap.
-                    Fokusnya adalah memberdayakan para pembuat film Indonesia dan menyediakan konten yang menarik bagi pemirsa.
+            <div class="col-lg-7 text-center text-lg-start order-2 order-lg-1">
+                <span class="badge-pink mb-3 text-uppercase small">Streaming Video Pendek #1</span>
+                
+                <h1 class="display-4 display-md-2 fw-bolder lh-1 mb-4">
+                    Serunya Nonton Miniseri <br> 
+                    <span class="text-magenta-gradient">Kapan Saja.</span>
+                </h1>
+                
+                <p class="lead text-secondary mb-4 pe-lg-5 fs-6 fs-md-5">
+                    Nikmati keseruan menonton miniseri favorit kapan saja dan di mana saja. Temukan berbagai cerita menarik dalam format pendek.
                 </p>
+                
+                <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                    <a href="https://play.google.com/store/apps/details?id=id.miniseri.mobile"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40" alt="Play Store"></a>
+                    <a href="https://apps.apple.com/id/app/miniseri/id6575369357?l=id"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40" alt="App Store"></a>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-                <div class="glass p-8 rounded-3xl hover:border-pink-500/50 transition-all duration-300 group flex flex-col items-center">
-                    <div class="w-14 h-14 bg-pink-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                        </svg>
+            <div class="col-lg-5 d-flex justify-content-center position-relative order-1 order-lg-2 mb-5 mb-lg-0">
+                <div class="phone-mockup" style="transform: scale(0.9);"> <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop" class="w-100 h-100 object-fit-cover opacity-75" alt="Preview">
+                    <div class="position-absolute bottom-0 start-0 p-4 w-100 text-start" style="background: linear-gradient(transparent, rgba(0,0,0,0.9))">
+                        <p class="text-magenta-gradient fw-bold mb-0 small">Episode 05</p>
+                        <h3 class="h6 fw-bold m-0 text-white">Cinta di Balik Layar</h3>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Hiburan Tanpa Batas</h3>
-                    <p class="text-gray-400 leading-relaxed">Terdapat mini series yang bisa dinikmati oleh semua kalangan</p>
                 </div>
-
-                <div class="glass p-8 rounded-3xl hover:border-pink-500/50 transition-all duration-300 group flex flex-col items-center">
-                    <div class="w-14 h-14 bg-pink-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 ml-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Monetisasi Konten Mini Series</h3>
-                    <p class="text-gray-400 leading-relaxed">Creator dapat memonetisasi konten mini series yang dibuat dan mendapatkan keuntungan</p>
-                </div>
-
-                <div class="glass p-8 rounded-3xl hover:border-pink-500/50 transition-all duration-300 group flex flex-col items-center">
-                    <div class="w-14 h-14 bg-pink-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Konten Gratis Dan Berbayar</h3>
-                    <p class="text-gray-400 leading-relaxed">Terdapat konten gratis dan berbayar yang bisa dinikmati oleh semua para pengguna</p>
-                </div>
+                
+                <div class="bg-glow translate-middle start-50 top-50 d-none d-md-block" style="width: 300px; height: 300px; opacity: 0.5;"></div>
             </div>
-        </div>
-    </section>
-    <!-- <div class="flex justify-between items-end mb-12">
-        <div>
-            <h2 class="text-3xl font-bold mb-2" id="tentangKami">Service We Provide</h2>
-            <div class="h-1 w-20 bg-pink-600 rounded-full"></div>
-        </div>
-        <a href="#" class="text-pink-500 font-semibold hover:underline">Lihat Semua</a>
-    </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        <div class="group cursor-pointer">
-            <div class="aspect-[9/16] rounded-2xl overflow-hidden glass mb-4 relative">
-                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Poster">
-                <div class="absolute top-3 right-3 bg-black/60 px-2 py-1 rounded text-[10px] font-bold">HD</div>
-            </div>
-            <h4 class="font-bold group-hover:text-pink-500 transition">Rahasia Senja</h4>
-            <p class="text-sm text-gray-500">Drama • 12 Eps</p>
-        </div>
-
-        <div class="group cursor-pointer">
-            <div class="aspect-[9/16] rounded-2xl overflow-hidden glass mb-4 relative">
-                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Poster">
-                <div class="absolute top-3 right-3 bg-black/60 px-2 py-1 rounded text-[10px] font-bold">NEW</div>
-            </div>
-            <h4 class="font-bold group-hover:text-pink-500 transition">Detektif Cilik</h4>
-            <p class="text-sm text-gray-500">Misteri • 08 Eps</p>
-        </div>
-        </div> -->
-
-    <section class="py-24 px-6 container mx-auto" id="syarat">
-
-    </section>
-
-    <section id="faq" class="py-24 px-6 bg-[#0a0a0a] relative overflow-hidden">
-        <div class="container mx-auto relative z-10">
-            <div class="text-center mb-16">
-                <p class="text-pink-500 font-bold tracking-widest uppercase text-sm mb-3">Frequently Asked Question</p>
-                <div class="h-1 w-24 bg-gradient-to-r from-pink-500 to-rose-600 mx-auto rounded-full mb-16"></div>
-                <h3 class="text-gray-400 max-w-2xl mx-auto text-3xl md:text-3xl font-semibold leading-relaxed mb-14">
-                    PERTANYAAN YANG SERING DIAJUKAN
-                </h3>
-                <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                    Berikut adalah beberapa pertanyaan yang sering diajukan oleh pengguna sebelum menggunakan layanan kami. Jika Anda memiliki pertanyaan lain, jangan ragu untuk menghubungi kami.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="daftar-sineas" x-data="{ open: false }" class="px-4">
-    <div class="container mx-auto flex justify-center">
-        <button
-            @click="open = true"
-            class="bg-black text-white px-4 py-2 rounded hover:bg-pink-600">
-            Daftar Sineas
-        </button>
-    </div>
-
-    <div
-        x-show="open"
-        x-cloak
-        @click.self="open = false"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-
-        <!-- Modal container -->
-        <div
-            class="bg-white w-full sm:w-auto max-w-xl rounded-2xl p-4 sm:p-6 
-                   overflow-y-auto max-h-[90vh]">
-
-            <!-- Close button -->
-            <button
-                @click="open = false"
-                class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl">
-                ✕
-            </button>
-
-            <h2 class="text-2xl font-bold mb-1 text-black">Daftar Sebagai Sineas</h2>
-            <p class="text-sm text-gray-500 mb-6">
-                Pendaftaran karya film untuk aplikasi miniseri.id
-            </p>
-
-            <form class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1 text-gray-900">Nama Sineas</label>
-                    <input
-                        type="text"
-                        class="w-full bg-gray-100 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                </div>
-
-                <div>
-                    <label class="block text-sm font-medium mb-1 text-gray-900">Email</label>
-                    <input
-                        type="email"
-                        class="w-full bg-gray-100 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                </div>
-
-                <div>
-                    <label class="block text-sm font-medium mb-1 text-gray-900">No Hp</label>
-                    <input
-                        type="text"
-                        class="w-full bg-gray-100 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                </div>
-
-                <div>
-                    <label class="block text-sm font-medium mb-1 text-gray-900">
-                        Bersedia mengedit film sesuai format miniseri.id
-                    </label>
-                    <select
-                        class="w-full bg-gray-100 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                        <option value="">Pilih</option>
-                        <option value="ya">Ya</option>
-                        <option value="tidak">Tidak</option>
-                    </select>
-                    <p class="text-xs text-gray-400 mt-1">
-                        Vertical dan berdurasi 2–3 menit per clip
-                    </p>
-                </div>
-
-                <div class="flex items-start gap-2 text-sm text-gray-600">
-                    <input type="checkbox" class="mt-1">
-                    <p>
-                        Dengan ini saya yang memiliki hak penuh atas kepemilikan karya,
-                        dengan sadar dan tanpa paksaan mendaftarkan karya saya untuk
-                        ditayangkan dan dipasarkan di platform miniseri.id
-                    </p>
-                </div>
-
-                <button
-                    type="submit"
-                    class="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 rounded-full mt-4">
-                    DAFTAR SEKARANG
-                </button>
-            </form>
+            
         </div>
     </div>
 </section>
 
+    <section id="tentangKami" class="py-5">
+        <div class="container py-5 text-center">
+            <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">Service We Provide</p>
+            <div class="bg-magenta-gradient mx-auto mb-5" style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
+            
+            <h2 class="h1 fw-bold text-secondary-emphasis mb-4">PLATFORM VIDEO POTRAIT UNTUK SEMUA KALANGAN</h2>
+            <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
+                Miniseri.id adalah platform digital yang didedikasikan untuk film vertikal di Indonesia. Menawarkan format unik dimana kisah diceritakan melalui klip pendek.
+            </p>
 
-    <section id="kontak">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="glass-card p-5 h-100">
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
+                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                            </svg>
+                        </div>
+                        <h4 class="fw-bold mb-3">Hiburan Tanpa Batas</h4>
+                        <p class="text-secondary small">Terdapat mini series yang bisa dinikmati oleh semua kalangan.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-5 h-100">
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
+                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient" viewBox="0 0 16 16">
+                                <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9A1.5 1.5 0 0 1 1.5 3H2V1.78a1.5 1.5 0 0 1 1.864-1.454L12.136.326zM5 3h6V1.78a.5.5 0 0 0-.621-.485L5.429 2.54A.5.5 0 0 0 5 3z"/>
+                            </svg>
+                        </div>
+                        <h4 class="fw-bold mb-3">Monetisasi Konten</h4>
+                        <p class="text-secondary small">Creator dapat memonetisasi konten mini series yang dibuat.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-5 h-100">
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
+                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient" viewBox="0 0 16 16">
+                                <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5v-5A3.5 3.5 0 0 0 10.5 2h-5zm.5 3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </div>
+                        <h4 class="fw-bold mb-3">Gratis & Berbayar</h4>
+                        <p class="text-secondary small">Terdapat pilihan konten sesuai dengan preferensi pengguna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="syarat" class="py-5">
 
     </section>
 
-    <footer class="py-12 border-t border-white/5 bg-[#050505]">
-        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+    <section id="faq" class="py-5">
+
+    </section>
+
+    <section id="daftar-sineas">
+        <div class="container text-center py-5">
+            <button type="button" class="btn btn-outline-light px-5 py-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#modalSineas">
+                Daftar Sineas
+            </button>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modalSineas" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-white text-dark">
+                <div class="modal-body p-4 p-md-5">
+                    <div class="d-flex justify-content-between align-items-start mb-4">
+                        <div>
+                            <h2 class="fw-medium mb-1">Daftar Sebagai Sineas</h2>
+                            <p class="text-muted small">Pendaftaran karya film untuk miniseri.id</p>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <form action="{{ route('daftarSineas') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold small">Nama Sineas</label>
+                            <input type="text" class="form-control form-control-lg bg-light border-0" name="nama_sineas" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold small">Email</label>
+                            <input type="email" class="form-control form-control-lg bg-light border-0" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold small">No HP</label>
+                            <input type="text" class="form-control form-control-lg bg-light border-0" name="no_hp" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold small">Ketersediaan</label>
+                            <select class="form-select  bg-light border-0" name="ketersediaan" required>
+                                <option value="">Pilih</option>
+                                <option value="ya">Ya</option>
+                                <option value="tidak">Tidak</option>
+                            </select>
+                        </div>
+                        <div class="form-check small text-muted mb-4">
+                            <input class="form-check-input" type="checkbox" id="agree">
+                            <label class="form-check-label" for="agree">
+                                Dengan ini saya memiliki hak penuh atas karya saya untuk dipasarkan.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-pink w-100 py-3">DAFTAR SEKARANG</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 border-top border-secondary border-opacity-10 mt-5">
+        <div class="container text-center text-secondary small">
             <p>© 2026 Miniseri All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.js') }}"></script>
 </body>
-<script>
-    const burger = document.getElementById('burger')
-    const mobileMenu = document.getElementById('mobileMenu')
-
-    burger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden')
-    })
-
-    const menuItems = document.querySelectorAll('.menu-item');
-
-    menuItems.forEach(item => {
-        item.addEventListener('click', function() {
-            menuItems.forEach(i => {
-                i.classList.remove('text-pink-500');
-                i.classList.remove('text-gray-300');
-            });
-
-            this.classList.add('text-pink-500');
-            this.classList.remove('text-gray-300');
-        });
-    });
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
 </html>

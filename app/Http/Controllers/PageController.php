@@ -26,15 +26,19 @@ class PageController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        $request->validate([
-            'nama_sineas' => 'required|string|max:255',
-            'email' => 'required|email|users:unique,users',
-            'no_hp' => 'required|string',
-            'ketersediaan' => 'required|in:ya,tidak',
-        ]);
-    }
+        public function store(Request $request)
+        {
+            $validasi = $request->validate([
+                'nama_sineas' => 'required|string|max:255',
+                'email' => 'required|string|unique:users,email',
+                'no_hp' => 'required|string',
+                'ketersediaan' => 'required|in:ya,tidak',
+            ]);
+
+            Page::create($validasi);
+
+            return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
+        }
 
     /**
      * Display the specified resource.
