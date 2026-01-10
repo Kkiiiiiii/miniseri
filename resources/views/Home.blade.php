@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miniseri | Platform Video Potret</title>
-    
+
     <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -57,7 +57,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            outline: 1px solid rgba(255,255,255,0.1);
+            outline: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .badge-pink {
@@ -91,122 +91,139 @@
             border-radius: 1.5rem;
             border: none;
         }
-
-        
     </style>
 </head>
 
 <body>
     @if (session('success'))
-<!-- Modal -->
-<div class="modal fade" id="successModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-4">
+        <!-- Modal -->
+        <div class="modal fade" id="successModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center p-4">
 
-      <!-- Icon -->
-      <div class="mb-3">
-        <div class="rounded-circle border border-success d-inline-flex align-items-center justify-content-center"
-             style="width:90px;height:90px;">
-          <svg width="40" height="40" fill="none" stroke="green" stroke-width="3" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-          </svg>
+                    <!-- Icon -->
+                    <div class="mb-3">
+                        <div class="rounded-circle border border-success d-inline-flex align-items-center justify-content-center"
+                            style="width:90px;height:90px;">
+                            <svg width="40" height="40" fill="none" stroke="green" stroke-width="3"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Title -->
+                    <h3 class="fw-bold">Yay!</h3>
+
+                    <!-- Message -->
+                    <p class="text-muted">
+                        {{ session('success') }}
+                    </p>
+
+                    <!-- Button -->
+                    <button class="btn btn-primary px-4" data-bs-dismiss="modal">
+                        OK
+                    </button>
+
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Title -->
-      <h3 class="fw-bold">Yay!</h3>
-
-      <!-- Message -->
-      <p class="text-muted">
-        {{ session('success') }}
-      </p>
-
-      <!-- Button -->
-      <button class="btn btn-primary px-4" data-bs-dismiss="modal">
-        OK
-      </button>
-
-    </div>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      var successModal = new bootstrap.Modal(
-          document.getElementById('successModal')
-      );
-      successModal.show();
-  });
-</script>
-@endif
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var successModal = new bootstrap.Modal(
+                    document.getElementById('successModal')
+                );
+                successModal.show();
+            });
+        </script>
+    @endif
 
     @include('layout')
-   <section class="position-relative d-flex align-items-center min-vh-100 px-3 pt-5">
-    <div class="bg-glow top-0 end-0"></div>
-    
-    <div class="container py-5">
-        <div class="row align-items-center gy-4">
-            
-            <div class="col-lg-7 text-center text-lg-start order-2 order-lg-1">
-                <span class="badge-pink mb-3 text-uppercase small">Streaming Video Pendek #1</span>
-                
-                <h1 class="display-4 display-md-2 fw-bolder lh-1 mb-4">
-                    Serunya Nonton Miniseri <br> 
-                    <span class="text-magenta-gradient">Kapan Saja.</span>
-                </h1>
-                
-                <p class="lead text-secondary mb-4 pe-lg-5 fs-6 fs-md-5">
-                    Nikmati keseruan menonton miniseri favorit kapan saja dan di mana saja. Temukan berbagai cerita menarik dalam format pendek.
-                </p>
-                
-                <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-                    <a href="https://play.google.com/store/apps/details?id=id.miniseri.mobile"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40" alt="Play Store"></a>
-                    <a href="https://apps.apple.com/id/app/miniseri/id6575369357?l=id"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40" alt="App Store"></a>
-                </div>
-            </div>
+    <section class="position-relative d-flex align-items-center min-vh-100 px-3 pt-5">
+        <div class="bg-glow top-0 end-0"></div>
 
-            <div class="col-lg-5 d-flex justify-content-center position-relative order-1 order-lg-2 mb-5 mb-lg-0">
-                <div class="phone-mockup" style="transform: scale(0.9);"> <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop" class="w-100 h-100 object-fit-cover opacity-75" alt="Preview">
-                    <div class="position-absolute bottom-0 start-0 p-4 w-100 text-start" style="background: linear-gradient(transparent, rgba(0,0,0,0.9))">
-                        <p class="text-magenta-gradient fw-bold mb-0 small">Episode 05</p>
-                        <h3 class="h6 fw-bold m-0 text-white">Cinta di Balik Layar</h3>
+        <div class="container py-5">
+            <div class="row align-items-center gy-4">
+
+                <div class="col-lg-7 text-center text-lg-start order-2 order-lg-1">
+                    <span class="badge-pink mb-3 text-uppercase small">Streaming Video Pendek #1</span>
+
+                    <h1 class="display-4 display-md-2 fw-bolder lh-1 mb-4">
+                        Serunya Nonton Miniseri <br>
+                        <span class="text-magenta-gradient">Kapan Saja.</span>
+                    </h1>
+
+                    <p class="lead text-secondary mb-4 pe-lg-5 fs-6 fs-md-5">
+                        Nikmati keseruan menonton miniseri favorit kapan saja dan di mana saja. Temukan berbagai cerita
+                        menarik dalam format pendek.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                        <a href="https://play.google.com/store/apps/details?id=id.miniseri.mobile"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                height="40" alt="Play Store"></a>
+                        <a href="https://apps.apple.com/id/app/miniseri/id6575369357?l=id"><img
+                                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                height="40" alt="App Store"></a>
                     </div>
                 </div>
-                
-                <div class="bg-glow translate-middle start-50 top-50 d-none d-md-block" style="width: 300px; height: 300px; opacity: 0.5;"></div>
+
+                <div class="col-lg-5 d-flex justify-content-center position-relative order-1 order-lg-2 mb-5 mb-lg-0">
+                    <div class="phone-mockup" style="transform: scale(0.9);"> <img
+                            src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop"
+                            class="w-100 h-100 object-fit-cover opacity-75" alt="Preview">
+                        <div class="position-absolute bottom-0 start-0 p-4 w-100 text-start"
+                            style="background: linear-gradient(transparent, rgba(0,0,0,0.9))">
+                            <p class="text-magenta-gradient fw-bold mb-0 small">Episode 05</p>
+                            <h3 class="h6 fw-bold m-0 text-white">Cinta di Balik Layar</h3>
+                        </div>
+                    </div>
+
+                    <div class="bg-glow translate-middle start-50 top-50 d-none d-md-block"
+                        style="width: 300px; height: 300px; opacity: 0.5;"></div>
+                </div>
+
             </div>
-            
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="tentangKami" class="py-5">
         <div class="container py-5 text-center">
             <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">Service We Provide</p>
-            <div class="bg-magenta-gradient mx-auto mb-5" style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
-            
-            <h2 class="h1 fw-bold text-secondary-emphasis mb-4">PLATFORM VIDEO POTRAIT UNTUK SEMUA KALANGAN</h2>
+            <div class="bg-magenta-gradient mx-auto mb-5"
+                style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
+
+            <h3 class="fw-bold text-secondary-emphasis mb-4">Platform Video Potrait Untuk Mini Series Untuk Semua Kalangan</h3>
             <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
-                Miniseri.id adalah platform digital yang didedikasikan untuk film vertikal di Indonesia. Menawarkan format unik dimana kisah diceritakan melalui klip pendek.
+                Miniseri.id adalah platform digital yang didedikasikan untuk film vertikal di Indonesia. Menawarkan
+                format unik dimana kisah diceritakan melalui klip pendek.
             </p>
 
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="glass-card p-5 h-100">
-                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
-                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient" viewBox="0 0 16 16">
-                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
+                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                             </svg>
                         </div>
                         <h4 class="fw-bold mb-3">Hiburan Tanpa Batas</h4>
-                        <p class="text-secondary small">Terdapat mini series yang bisa dinikmati oleh semua kalangan.</p>
+                        <p class="text-secondary small">Terdapat mini series yang bisa dinikmati oleh semua kalangan.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="glass-card p-5 h-100">
-                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
-                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient" viewBox="0 0 16 16">
-                                <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9A1.5 1.5 0 0 1 1.5 3H2V1.78a1.5 1.5 0 0 1 1.864-1.454L12.136.326zM5 3h6V1.78a.5.5 0 0 0-.621-.485L5.429 2.54A.5.5 0 0 0 5 3z"/>
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
+                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9A1.5 1.5 0 0 1 1.5 3H2V1.78a1.5 1.5 0 0 1 1.864-1.454L12.136.326zM5 3h6V1.78a.5.5 0 0 0-.621-.485L5.429 2.54A.5.5 0 0 0 5 3z" />
                             </svg>
                         </div>
                         <h4 class="fw-bold mb-3">Monetisasi Konten</h4>
@@ -215,9 +232,12 @@
                 </div>
                 <div class="col-md-4">
                     <div class="glass-card p-5 h-100">
-                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
-                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient" viewBox="0 0 16 16">
-                                <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5v-5A3.5 3.5 0 0 0 10.5 2h-5zm.5 3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"/>
+                        <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
+                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5v-5A3.5 3.5 0 0 0 10.5 2h-5zm.5 3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z" />
                             </svg>
                         </div>
                         <h4 class="fw-bold mb-3">Gratis & Berbayar</h4>
@@ -229,8 +249,34 @@
     </section>
 
     <section id="syarat" class="py-5">
+    <div class="container-fluid">
+        <div class="row g-0">
 
-    </section>
+            <div class="col-md-6">
+                <img src="{{ asset('assets/image/bg-pc.jpg') }}"
+                     class="w-100 h-100 object-fit-cover rounded"
+                     style="min-height: 300px;"
+                     alt="">
+            </div>
+
+            <div class="col-md-6 d-flex flex-column justify-content-start px-4 px-md-5 py-4">
+                <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">TERM AND CONDITION</p>
+                <div class="mb-4" style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
+                <h3 class="fw-bold text-secondary-emphasis mb-4">Syarat dan Ketentuan Kerja Sama</h3>
+                <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
+               Harap dibaca dengan cermat sebelum menggunakan layanan kami. Syarat dan ketentuan ini mengatur penggunaan website dan layanan yang disediakan oleh kami untuk memastikan pengalaman yang aman dan menyenangkan bagi semua pengguna.
+            </p>
+
+                <a href="{{  }}" class="btn btn-primary mt-3">
+                    Daftar Sekarang
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
     <section id="faq" class="py-5">
 
@@ -238,7 +284,8 @@
 
     <section id="daftar-sineas">
         <div class="container text-center py-5">
-            <button type="button" class="btn btn-outline-light px-5 py-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#modalSineas">
+            <button type="button" class="btn btn-outline-light px-5 py-3 rounded-pill" data-bs-toggle="modal"
+                data-bs-target="#modalSineas">
                 Daftar Sineas
             </button>
         </div>
@@ -253,22 +300,26 @@
                             <h2 class="fw-medium mb-1">Daftar Sebagai Sineas</h2>
                             <p class="text-muted small">Pendaftaran karya film untuk miniseri.id</p>
                         </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
 
                     <form action="{{ route('daftarSineas') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label class="form-label fw-semibold small">Nama Sineas</label>
-                            <input type="text" class="form-control form-control-lg bg-light border-0" name="nama_sineas" required>
+                            <input type="text" class="form-control form-control-lg bg-light border-0"
+                                name="nama_sineas" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-semibold small">Email</label>
-                            <input type="email" class="form-control form-control-lg bg-light border-0" name="email" required>
+                            <input type="email" class="form-control form-control-lg bg-light border-0"
+                                name="email" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-semibold small">No HP</label>
-                            <input type="text" class="form-control form-control-lg bg-light border-0" name="no_hp" required>
+                            <input type="text" class="form-control form-control-lg bg-light border-0"
+                                name="no_hp" required>
                         </div>
                         <div class="mb-4">
                             <label class="form-label fw-semibold small">Ketersediaan</label>
@@ -284,7 +335,7 @@
                                 Dengan ini saya memiliki hak penuh atas karya saya untuk dipasarkan.
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-pink w-100 py-3">DAFTAR SEKARANG</button>
+                        <button type="submit" class="btn btn- w-100 py-3">DAFTAR SEKARANG</button>
                     </form>
                 </div>
             </div>
@@ -299,4 +350,5 @@
 
     <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.js') }}"></script>
 </body>
+
 </html>
