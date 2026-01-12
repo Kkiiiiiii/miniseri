@@ -80,7 +80,7 @@
             transition: 0.3s;
         }
 
-        .btn-outline-pink{
+        .btn-outline-pink {
             background-color: #d63384;
             border: 2px solid #d63384;
             color: white;
@@ -89,7 +89,7 @@
             transition: all 0.3s ease;
         }
 
-        .btn-outline-pink:hover{
+        .btn-outline-pink:hover {
             background-color: #fff;
             color: #d63384;
             border-color: #d63384;
@@ -282,11 +282,12 @@
                     {{-- <a href="{{ asset('assets/ketentuan.pdf') }}" target="_blank">
                     <button class="btn mt-3 btn-outline-primary">Baca Detail Lengkap</button>
                 </a> --}}
-                <div class="container">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#pdf" class="btn btn-outline-pink rounded-pill">
-                        Baca Detail Lengkap
-                    </button>
-                </div>
+                    <div class="container">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#pdf"
+                            class="btn btn-outline-pink rounded-pill">
+                            Baca Detail Lengkap
+                        </button>
+                    </div>
 
                     <div class="modal fade" id="pdf" tabindex="-1">
                         <div class="modal-dialog modal-xl">
@@ -308,7 +309,16 @@
     </section>
 
     <section id="faq" class="py-5">
-
+        <div class="container py-5 text-center">
+            <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">
+                FREQUENTLY ASKED QUESTIONS
+            </p>
+            <div class="bg-magenta-gradient mx-auto mb-5"
+                style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
+            <details open>
+                <summary></summary>
+            </details>
+        </div>
     </section>
 
     <section id="daftar-sineas">
@@ -327,7 +337,7 @@
                     <div class="d-flex justify-content-between align-items-start mb-4">
                         <div>
                             <h4 class="fw-bold mb-1">Daftar Sebagai Sineas</h2>
-                            <p class="text-muted small">Pendaftaran karya film untuk aplikasi miniseri.id</p>
+                                <p class="text-muted small">Pendaftaran karya film untuk aplikasi miniseri.id</p>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
@@ -351,7 +361,8 @@
                                 name="no_hp" required>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label fw-semibold small">Bersedia mengedit film sesuai format miniseri.id</label>
+                            <label class="form-label fw-semibold small">Bersedia mengedit film sesuai format
+                                miniseri.id</label>
                             <select class="form-select  bg-light border-0" name="ketersediaan" required>
                                 <option value="">Pilih</option>
                                 <option value="ya">Ya</option>
@@ -363,7 +374,9 @@
                         <div class="form-check small text-muted mb-4">
                             <input class="form-check-input" type="checkbox" id="agree">
                             <label class="form-check-label" for="agree">
-                                Dengan ini saya yang memiliki hak penuh atas kepemilikan karya, dengan sadar dan tanpa paksaan mendaftarkan karya saya untuk dapat ditayangkan dan dipasarkan di platform miniseri.id
+                                Dengan ini saya yang memiliki hak penuh atas kepemilikan karya, dengan sadar dan tanpa
+                                paksaan mendaftarkan karya saya untuk dapat ditayangkan dan dipasarkan di platform
+                                miniseri.id
                             </label>
                         </div>
                         <button type="submit" class="btn btn-pink w-100 py-3">DAFTAR SEKARANG</button>
@@ -380,4 +393,5 @@
     </footer>
     <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.js') }}"></script>
 </body>
+
 </html>
