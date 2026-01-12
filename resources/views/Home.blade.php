@@ -316,7 +316,7 @@
             <div class="bg-magenta-gradient mx-auto mb-5"
                 style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
             <details open>
-                <summary></summary>
+                <summary>.</summary>
             </details>
         </div>
     </section>
@@ -374,6 +374,7 @@
                         <div class="form-check small text-muted mb-4">
                             <input class="form-check-input" type="checkbox" id="agree">
                             <label class="form-check-label" for="agree">
+                                <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
                                 Dengan ini saya yang memiliki hak penuh atas kepemilikan karya, dengan sadar dan tanpa
                                 paksaan mendaftarkan karya saya untuk dapat ditayangkan dan dipasarkan di platform
                                 miniseri.id
@@ -391,7 +392,9 @@
             <p>© 2026 Miniseri All rights reserved.</p>
         </div>
     </footer>
+
     <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.js') }}"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>

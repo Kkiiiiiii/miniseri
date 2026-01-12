@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class PageController extends Controller
 {
@@ -26,19 +27,32 @@ class PageController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-        public function store(Request $request)
-        {
-            $validasi = $request->validate([
-                'nama_sineas' => 'required|string|max:255',
-                'email' => 'required|string|unique:users,email',
-                'no_hp' => 'required|string',
-                'ketersediaan' => 'required|in:ya,tidak',
-            ]);
+    public function store(Request $request)
+    {
+        $validasi = $request->validate([
+            'nama_sineas' => 'required|string|max:255',
+            'email' => 'required|string|unique:users,email',
+            'no_hp' => 'required|string',
+            'ketersediaan' => 'required|in:ya,tidak',
+            'recaptcha_token' => 'required',
+        ]);
 
-            Page::create($validasi);
+        // $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+        //     'secret' => config('recaptcha.secret_key'),
+        //     'response' => $request->recaptcha_token,
+        //     'remoteip' => $request->ip(),
+        // ]);
 
-            return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
-        }
+        // $result = $response->json();
+
+        // if (!($result['success'] ?? false) || ($result['score'] ?? 0) < 0.5) {
+        //     return back()->withErrors(['recaptcha' => 'Verifikasi reCAPTCHA gagal, silakan coba lagi.']);
+        // }
+
+        Page::create($validasi);
+
+        return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
+    }
 
     /**
      * Display the specified resource.
