@@ -261,7 +261,7 @@
     </section>
 
     <section id="syarat" class="py-5">
-        <div class="container-fluid">
+        <div class="container-fluid py-5">
             <div class="row g-0">
 
                 <div class="col-md-6">
@@ -326,8 +326,8 @@
                 <div class="modal-body p-4 p-md-5">
                     <div class="d-flex justify-content-between align-items-start mb-4">
                         <div>
-                            <h2 class="fw-medium mb-1">Daftar Sebagai Sineas</h2>
-                            <p class="text-muted small">Pendaftaran karya film untuk miniseri.id</p>
+                            <h4 class="fw-bold mb-1">Daftar Sebagai Sineas</h2>
+                            <p class="text-muted small">Pendaftaran karya film untuk aplikasi miniseri.id</p>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
@@ -351,17 +351,19 @@
                                 name="no_hp" required>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label fw-semibold small">Ketersediaan</label>
+                            <label class="form-label fw-semibold small">Bersedia mengedit film sesuai format miniseri.id</label>
                             <select class="form-select  bg-light border-0" name="ketersediaan" required>
                                 <option value="">Pilih</option>
                                 <option value="ya">Ya</option>
                                 <option value="tidak">Tidak</option>
                             </select>
+                            <span class="text-muted fs-sm mt-1" style="font-size: 12px;">
+                                Vertical dan berdurasi 2-3 menit per <i>clip</i></span>
                         </div>
                         <div class="form-check small text-muted mb-4">
                             <input class="form-check-input" type="checkbox" id="agree">
                             <label class="form-check-label" for="agree">
-                                Dengan ini saya memiliki hak penuh atas karya saya untuk dipasarkan.
+                                Dengan ini saya yang memiliki hak penuh atas kepemilikan karya, dengan sadar dan tanpa paksaan mendaftarkan karya saya untuk dapat ditayangkan dan dipasarkan di platform miniseri.id
                             </label>
                         </div>
                         <button type="submit" class="btn btn-pink w-100 py-3">DAFTAR SEKARANG</button>
@@ -376,8 +378,6 @@
             <p>© 2026 Miniseri All rights reserved.</p>
         </div>
     </footer>
-
     <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.js') }}"></script>
 </body>
-
 </html>
