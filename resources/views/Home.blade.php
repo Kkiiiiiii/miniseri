@@ -187,7 +187,7 @@
                         <div class="position-absolute bottom-0 start-0 p-4 w-100 text-start"
                             style="background: linear-gradient(transparent, rgba(0,0,0,0.9))">
                             <p class="text-magenta-gradient fw-bold mb-0 small">Episode 05</p>
-                            <h3 class="h6 fw-bold m-0 text-white">Cinta di Balik Layar</h3>
+                            <h3 class="h6 fw-bold m-0 text-white">123</h3>
                         </div>
                     </div>
 
@@ -396,5 +396,4 @@
     <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.js') }}"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
-
 </html>

@@ -37,18 +37,6 @@ class PageController extends Controller
             'recaptcha_token' => 'required',
         ]);
 
-        // $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-        //     'secret' => config('recaptcha.secret_key'),
-        //     'response' => $request->recaptcha_token,
-        //     'remoteip' => $request->ip(),
-        // ]);
-
-        // $result = $response->json();
-
-        // if (!($result['success'] ?? false) || ($result['score'] ?? 0) < 0.5) {
-        //     return back()->withErrors(['recaptcha' => 'Verifikasi reCAPTCHA gagal, silakan coba lagi.']);
-        // }
-
         Page::create($validasi);
 
         return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
