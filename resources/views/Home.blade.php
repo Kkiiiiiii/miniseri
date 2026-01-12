@@ -87,7 +87,6 @@
             transform: scale(1.05);
         }
 
-        /* Modal Customization */
         .modal-content {
             border-radius: 1.5rem;
             border: none;
@@ -97,12 +96,11 @@
 
 <body>
     @if (session('success'))
-        <!-- Modal -->
         <div class="modal fade" id="successModal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content text-center p-4">
 
-                    <!-- Icon -->
+                    
                     <div class="mb-3">
                         <div class="rounded-circle border border-success d-inline-flex align-items-center justify-content-center"
                             style="width:90px;height:90px;">
@@ -125,7 +123,6 @@
                     <button class="btn btn-primary px-4" data-bs-dismiss="modal">
                         OK
                     </button>
-
                 </div>
             </div>
         </div>
@@ -267,13 +264,10 @@
                 <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
                Harap dibaca dengan cermat sebelum menggunakan layanan kami. Syarat dan ketentuan ini mengatur penggunaan website dan layanan yang disediakan oleh kami untuk memastikan pengalaman yang aman dan menyenangkan bagi semua pengguna.
             </p>
-                <a href="{{ asset('assets/image/term') }}" class="btn btn-primary mt-3">
-
-                <a href="" class="btn mt-3 btn-outline-primary">
-                    Daftar Sekarang
+                <a href="{{ asset('assets/ketentuan.pdf') }}" target="_blank">
+                    <button class="btn mt-3 btn-outline-primary">Baca Detail Lengkap</button>
                 </a>
             </div>
-
         </div>
     </div>
 </section>
