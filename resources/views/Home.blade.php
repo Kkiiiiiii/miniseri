@@ -77,8 +77,22 @@
             border: none;
             padding: 0.8rem 2rem;
             border-radius: 50px;
-            font-weight: bold;
             transition: 0.3s;
+        }
+
+        .btn-outline-pink{
+            background-color: #d63384;
+            border: 2px solid #d63384;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-pink:hover{
+            background-color: #fff;
+            color: #d63384;
+            border-color: #d63384;
         }
 
         .btn-pink:hover {
@@ -100,7 +114,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content text-center p-4">
 
-                    
+
                     <div class="mb-3">
                         <div class="rounded-circle border border-success d-inline-flex align-items-center justify-content-center"
                             style="width:90px;height:90px;">
@@ -111,15 +125,14 @@
                         </div>
                     </div>
 
-                    <!-- Title -->
+
                     <h3 class="fw-bold">Yay!</h3>
 
-                    <!-- Message -->
+
                     <p class="text-muted">
                         {{ session('success') }}
                     </p>
 
-                    <!-- Button -->
                     <button class="btn btn-primary px-4" data-bs-dismiss="modal">
                         OK
                     </button>
@@ -192,7 +205,8 @@
             <div class="bg-magenta-gradient mx-auto mb-5"
                 style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
 
-            <h3 class="fw-bold text-secondary-emphasis mb-4">Platform Video Potrait Untuk Mini Series Untuk Semua Kalangan</h3>
+            <h3 class="fw-bold text-secondary-emphasis mb-4">Platform Video Potrait Untuk Mini Series Untuk Semua
+                Kalangan</h3>
             <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
                 Miniseri.id adalah platform digital yang didedikasikan untuk film vertikal di Indonesia. Menawarkan
                 format unik dimana kisah diceritakan melalui klip pendek.
@@ -247,32 +261,51 @@
     </section>
 
     <section id="syarat" class="py-5">
-    <div class="container-fluid">
-        <div class="row g-0">
+        <div class="container-fluid">
+            <div class="row g-0">
 
-            <div class="col-md-6">
-                <img src="{{ asset('assets/image/bg-pc.jpg') }}"
-                     class="w-100 h-100 object-fit-cover rounded"
-                     style="min-height: 300px;"
-                     alt="">
-            </div>
+                <div class="col-md-6">
+                    <img src="{{ asset('assets/image/bg-pc.jpg') }}" class="w-100 h-100 object-fit-cover rounded"
+                        style="min-height: 300px;">
+                </div>
 
-            <div class="col-md-6 d-flex flex-column justify-content-start px-4 px-md-5 py-4">
-                <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">TERM AND CONDITION</p>
-                <div class="mb-4" style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
-                <h3 class="fw-bold text-secondary-emphasis mb-4">Syarat dan Ketentuan Kerja Sama</h3>
-                <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
-               Harap dibaca dengan cermat sebelum menggunakan layanan kami. Syarat dan ketentuan ini mengatur penggunaan website dan layanan yang disediakan oleh kami untuk memastikan pengalaman yang aman dan menyenangkan bagi semua pengguna.
-            </p>
-                <a href="{{ asset('assets/ketentuan.pdf') }}" target="_blank">
+                <div class="col-md-6 d-flex flex-column justify-content-start px-4 px-md-5 py-4">
+                    <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">TERM AND CONDITION</p>
+                    <div class="mb-4" style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;">
+                    </div>
+                    <h3 class="fw-bold text-secondary-emphasis mb-4">Syarat dan Ketentuan Kerja Sama</h3>
+                    <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
+                        Harap dibaca dengan cermat sebelum menggunakan layanan kami. Syarat dan ketentuan ini mengatur
+                        penggunaan website dan layanan yang disediakan oleh kami untuk memastikan pengalaman yang aman
+                        dan menyenangkan bagi semua pengguna.
+                    </p>
+                    {{-- <a href="{{ asset('assets/ketentuan.pdf') }}" target="_blank">
                     <button class="btn mt-3 btn-outline-primary">Baca Detail Lengkap</button>
-                </a>
+                </a> --}}
+                <div class="container">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#pdf" class="btn btn-outline-pink rounded-pill">
+                        Baca Detail Lengkap
+                    </button>
+                </div>
+
+                    <div class="modal fade" id="pdf" tabindex="-1">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Preview PDF</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe src="{{ asset('assets/ketentuan.pdf') }}" width="100%" height="600px">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-
+    </section>
 
     <section id="faq" class="py-5">
 
@@ -280,7 +313,7 @@
 
     <section id="daftar-sineas">
         <div class="container text-center py-5">
-            <button type="button" class="btn btn-outline-light px-5 py-3 rounded-pill" data-bs-toggle="modal"
+            <button type="button" class="btn btn-outline-pink px-5 py-3 rounded-pill" data-bs-toggle="modal"
                 data-bs-target="#modalSineas">
                 Daftar Sineas
             </button>
@@ -331,7 +364,7 @@
                                 Dengan ini saya memiliki hak penuh atas karya saya untuk dipasarkan.
                             </label>
                         </div>
-                        <button type="submit" class="btn btn- w-100 py-3">DAFTAR SEKARANG</button>
+                        <button type="submit" class="btn btn-pink w-100 py-3">DAFTAR SEKARANG</button>
                     </form>
                 </div>
             </div>
