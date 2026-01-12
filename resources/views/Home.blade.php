@@ -374,12 +374,12 @@
                         <div class="form-check small text-muted mb-4">
                             <input class="form-check-input" type="checkbox" id="agree">
                             <label class="form-check-label" for="agree">
-                                <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
                                 Dengan ini saya yang memiliki hak penuh atas kepemilikan karya, dengan sadar dan tanpa
                                 paksaan mendaftarkan karya saya untuk dapat ditayangkan dan dipasarkan di platform
                                 miniseri.id
                             </label>
                         </div>
+                        <div class="g-recaptcha mb-3" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
                         <button type="submit" class="btn btn-pink w-100 py-3">DAFTAR SEKARANG</button>
                     </form>
                 </div>
