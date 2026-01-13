@@ -10,7 +10,7 @@
         transform: translateY(0);
     }
 </style>
-<section class="position-relative d-flex align-items-center min-vh-100 px-3 pt-5" >
+<section class="position-relative d-flex align-items-center min-vh-100 px-3 pt-5">
         <div class="bg-glow top-0 end-0"></div>
 
         <div class="container py-5  fade-in-bottom">

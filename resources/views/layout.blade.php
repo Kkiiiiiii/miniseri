@@ -56,7 +56,6 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto gap-lg-4 pt-3 pt-md-0 text-uppercase" id="nav-menu">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#tentangKami">Tentang Kami</a>
