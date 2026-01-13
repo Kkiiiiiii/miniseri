@@ -68,6 +68,9 @@
                     <a class="nav-link" href="#faq">FAQ</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#sineas">Sineas</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#daftar-sineas">Daftar Sineas</a>
                 </li>
                 <li class="nav-item">
