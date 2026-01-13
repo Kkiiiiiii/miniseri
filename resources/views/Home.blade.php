@@ -315,13 +315,75 @@
             </p>
             <div class="bg-magenta-gradient mx-auto mb-5"
                 style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
+                    <h3 class="fw-bold text-secondary-emphasis mb-4">PERTANYAAN YANG SERING DIAJUKAN</h3>
+                    <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
+                Berikut adalah beberapa pertanyaan yang sering diajukan oleh pengguna sebelum menggunakan
+                layanan kami.Jika anda memiliki pertanyaan lain , jangan ragu untuk menghubungi kami.
+            </p>
             <details open>
-                <summary>.</summary>
+                <summary class="fw-bolder">Apa itu Miniseri.id</summary>
+                <p class="mt-2">Miniseri.id sebagai tempat digital eksklusif bagi film vertikal di Indonesia.
+                    Dengan sentuhan unik, kami memadukan potongan video menjadi satu kisah menghibur. Misi kami adalah memupuk semangat kreatif perfilman Tanah Air dan memberikan konten seru buat kamu.</p>
+            </details>
+            <details>
+                <summary class="fw-bolder">Bagaimana cara kerja Miniseri.id
+                    <p class="mt2">Pembuat konten dapat mengunggah miniseri atau film bersambung mereka dalam klip berdurasi 2-3 menit,
+                        Penonton bisa melihat klip ini secara berurutan, dan mengikutinya secara berkelanjutan. Platform ini mendukung monetisasi
+                        yang mudah bagi pembuat konten berdasarkan minat penonton.
+                    </p>
+                </summary>
+            </details>
+            <details>
+                <summary class="fw-bolder">Mengapa disini kita harus selalu menggunakan format video vertikal ?
+                    <p class="mt2">Karena format ini ideal untuk layar ponsel, memberikan pengalaman menonton yang menyenangkan, dan tentu saja selaras dengan tren menonton di smart phone saat ini.</p>
+                </summary>
+            </details>
+            <details>
+                <summary class="fw-bolder">Siapa saja yang dapat menggunakan Miniseri.id
+                    <p class="mt2">Miniseri. id menyambut para pembuat film, konten kreator, dan siapa saja yang ingin membagikan karyanya dalam format yang menarik dan mudah diakses. Kami juga mementingkan kenyamanan personal penonton dengan memudahkanmu untuk mengikuti series favorit.</p>
+                </summary>
+            </details>
+            <details>
+                <summary class="fw-bolder">Bagaimana cara menonton konten di Miniseri.id
+                    <p class="mt2">Rasakan sensasi petualangan film mini-seri dalam genggamanmu dengan aplikasi Miniseri.id! Segera unduh aplikasi kami di App Store atau Google Play, dan nikmati beragam konten menarik yang siap menghibur hari-harimu!</p>
+                </summary>
+            </details>
+            <details>
+                <summary class="fw-bolder">Bagaimana cara menghasilkan uang dari konten saya di Miniseri.id
+                    <p class="mt2">Ya, Miniseri. id membuka kesempatan emas bagi para kreator untuk memperoleh penghasilan tambahan. Kamu bisa menghasilkan pendapatan berdasarkan dari keterlibatan penonton. Seperti ‘klik’ untuk menonton klip berikutnya atau melalui pendapatan iklan kedepannya. Kami mendukung para pembuat film untuk menghasilkan uang dari kreativitas mereka dan membangun karier yang berkelanjutan di industri perfilman</p>
+                </summary>
+            </details>
+            <details>
+                <summary class="fw-bolder">Bagaimana cara penonton terlibat dalam konten Miniseri.id
+                    <p class="mt2">Penonton dapat terlibat dengan konten melalui menonton klip, memberikan like, berbagi, dan mengklik untuk melihat kelanjutan cerita. Dengan format interaktif ini, kita dapat mendorong interaksi yang lebih dalam dan memungkinkan penonton ikut serta dalam pengalaman bercerita.</p>
+                </summary>
+            </details>
+            <details>
+                <summary class="fw-bolder">Apakah penggunaan Miniseri.id dikenakan biaya
+                    <p class="mt2">Miniseri.id menyediakan konten gratis dan berbayar, termasuk klip tertentu yang hanya dapat diakses dengan koin. Hal ini memberikan kebebasan kepada penonton untuk menikmati konten dan juga mendukung kreator favorit mereka. Untuk informasi lebih lanjut tentang detail harga, cek info di dalam aplikasi ya!</p>
+                </summary>
+            </details>
+            <details>
+                <summary class="fw-bolder">Bagaimana Miniseri.id mendukung budaya dan komunitas Indonesia
+                    <p class="mt2">Miniseri.id merayakan keberagaman budaya Indonesia dengan menyediakan platform untuk kreatifitas anak muda indonesia dan menampilkan karya mereka. Menjadi penyemangat bagi para sineas lokal dan komunitas film kecil, menghidupkan kisah-kisah seru, dan ide-ide unik terbaik!</p>
+                </summary>
+            </details>
+            <details>
+                <summary class="fw-bolder">Dimana saya dapat menemukan informasi lebih lanjut tentang Miniseri.id
+                    <p class="mt2">Untuk informasi lebih lanjut, pembaruan, dan menjelajahi perpustakaan cerita vertikal Untuk berita terkini, update seru, dan eksplorasi cerita vertikal keren kami, mampir ke situs www.miniseri.id atau kepoin media sosial kami, ya!</p>
+                </summary>
             </details>
         </div>
     </section>
 
     <section id="daftar-sineas">
+        <div class="container-fluid py-5">
+            <div class="row g-0">
+                <div class="sineas col-md-6">
+                    {{--  --}}
+                </div>
+            </div>
+        </div>
         <div class="container text-center py-5">
             <button type="button" class="btn btn-outline-pink px-5 py-3 rounded-pill" data-bs-toggle="modal"
                 data-bs-target="#modalSineas">
@@ -336,7 +398,7 @@
                 <div class="modal-body p-4 p-md-5">
                     <div class="d-flex justify-content-between align-items-start mb-4">
                         <div>
-                            <h4 class="fw-bold mb-1">Daftar Sebagai Sineas</h2>
+                            <h4 class="fw-bold mb-1">Daftar Sebagai Sineas</h4>
                                 <p class="text-muted small">Pendaftaran karya film untuk aplikasi miniseri.id</p>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -386,6 +448,17 @@
             </div>
         </div>
     </div>
+
+    <section  id="kontak" class="px-5 py-5">
+        <div class="container-fluid py-5">
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-6">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
 
     <footer class="py-5 border-top border-secondary border-opacity-10 mt-5">
         <div class="container text-center text-secondary small">
