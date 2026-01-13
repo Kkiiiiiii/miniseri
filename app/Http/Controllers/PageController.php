@@ -42,13 +42,7 @@ class PageController extends Controller
         return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Page $page)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.

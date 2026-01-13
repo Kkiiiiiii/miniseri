@@ -14,7 +14,7 @@
     }
 
     .nav-link:hover {
-        color: #f472b6 !important; 
+        color: #f472b6 !important;
     }
 
     .nav-link.active {
@@ -68,7 +68,7 @@
                     <a class="nav-link" href="#faq">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Daftar Sineas</a>
+                    <a class="nav-link" href="#daftar-sineas">Daftar Sineas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#kontak">Kontak</a>
@@ -87,7 +87,7 @@
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navLinks.forEach(btn => btn.classList.remove('active'));
-                
+
                 this.classList.add('active');
 
                 // (Opsional) Tutup menu mobile otomatis setelah klik (untuk UX yang lebih baik)
