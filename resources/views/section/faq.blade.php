@@ -75,4 +75,4 @@
                     <p class="mt-2">Untuk informasi lebih lanjut, pembaruan, dan menjelajahi perpustakaan cerita vertikal Untuk berita terkini, update seru, dan eksplorasi cerita vertikal keren kami, mampir ke situs www.miniseri.id atau kepoin media sosial kami, ya!</p>
             </details>
         </div>
-    </section>
+</section>

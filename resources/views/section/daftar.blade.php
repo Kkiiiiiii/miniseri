@@ -1,16 +1,28 @@
  <section id="daftar-sineas">
         <div class="container-fluid py-5">
             <div class="row g-0">
-                <div class="sineas col-md-6">
-                    {{--  --}}
+                <div class="sineas col-md-6 mx-auto">
+                     <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">Join Sineas</p>
+                    <div class="mb-4" style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;">
+                    </div>
+                    <h3 class="fw-bold text-secondary-emphasis mb-4">AYO DAFTARKAN DIRI ANDA SEBAGAI SINEAS DI MINISERI.ID</h3>
+                    <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
+                        Dengan mendaftarkan diri anda sebagai sineas di Miniseri.id, Anda dapat menjadi bagian
+                        dari komunitas sineas indonesia yang berdedikasi untuk menghasilkan karya-karya berkualitas dan menarik,
+                        serta mendapatkan keuntungan dari hasil karya yang dihasilkan.
+                    </p>
+                    <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
+                        Harap dibaca dengan cermat pada syarat dan ketentuan yang berlaku sebelum mendaftar
+                        sebagai sineas di Miniseri.id
+                    </p>
+                    <button type="button" class="btn btn-outline-pink px-5 py-3 rounded-pill" data-bs-toggle="modal"
+                        data-bs-target="#modalSineas">
+                        Daftar Sineas
+                    </button>
                 </div>
             </div>
         </div>
         <div class="container text-center py-5">
-            <button type="button" class="btn btn-outline-pink px-5 py-3 rounded-pill" data-bs-toggle="modal"
-                data-bs-target="#modalSineas">
-                Daftar Sineas
-            </button>
         </div>
     </section>
      <div class="modal fade" id="modalSineas" tabindex="-1" aria-hidden="true">
