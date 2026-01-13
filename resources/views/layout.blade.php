@@ -38,6 +38,13 @@
     .navbar-toggler:focus {
         box-shadow: none;
     }
+        html {
+    scroll-behavior: smooth;
+}
+body {
+    padding-top: 90px; /* sesuaikan tinggi navbar */
+}
+
 </style>
 
 <nav class="navbar navbar-expand-md fixed-top navbar-glass px-lg-4 py-3" id="navbar">
@@ -56,6 +63,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto gap-lg-4 pt-3 pt-md-0 text-uppercase" id="nav-menu">
                 <li class="nav-item">
+                    <a class="nav-link" href="#banner">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#tentangKami">Tentang Kami</a>
@@ -80,7 +88,7 @@
     </div>
 </nav>
 
-<script>
+{{-- <script>
     document.addEventListener('DOMContentLoaded', function() {
         const navLinks = document.querySelectorAll('#nav-menu .nav-link');
         const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -99,4 +107,35 @@
             });
         });
     });
+</script> --}}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("#nav-menu .nav-link");
+
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        },
+        {
+            rootMargin: "-80px 0px -50% 0px",
+            threshold: 0
+        }
+    );
+
+    sections.forEach(section => observer.observe(section));
+});
 </script>
+
+

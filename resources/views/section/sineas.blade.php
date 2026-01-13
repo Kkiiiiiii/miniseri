@@ -1,5 +1,4 @@
-<section id="sineas" class="py-5">
-    <div class="container-fluid py-5 text-center">
+ <div class="container-fluid py-5 text-center">
           <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">
                 Sineas
             </p>
@@ -10,4 +9,3 @@
                 Berikut adalah beberapa daftar film yang bisa anda nikmati.
             </p>
     </div>
-</section>

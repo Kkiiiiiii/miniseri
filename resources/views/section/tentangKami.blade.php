@@ -1,5 +1,4 @@
-  <section id="tentangKami" class="py-5">
-        <div class="container py-5 text-center">
+  <div class="container py-5 text-center">
             <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">Service We Provide</p>
             <div class="bg-magenta-gradient mx-auto mb-5"
                 style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
@@ -57,4 +56,3 @@
                 </div>
             </div>
         </div>
-</section>

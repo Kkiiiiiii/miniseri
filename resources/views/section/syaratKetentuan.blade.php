@@ -1,5 +1,4 @@
- <section id="syarat" class="py-5">
-        <div class="container-fluid py-5">
+ <div class="container-fluid py-5">
             <div class="row g-0">
                 <div class="col-md-6">
                     <img src="{{ asset('assets/image/termNcondition.jpg') }}" class="w-100 h-100 object-fit-cover rounded"
@@ -43,4 +42,3 @@
                 </div>
             </div>
         </div>
-    </section>

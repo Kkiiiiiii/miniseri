@@ -7,6 +7,7 @@
     <title>Miniseri | Platform Video Potret</title>
 
     <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/fontawesome/css/all.min.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ asset('assets/image/miniseri.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -110,14 +111,11 @@
             cursor: pointer;
             float: left;
         }
+        body {
+    padding-top: 90px;
+}
 
-        summary p{
-            text-align: center;
-        }
 
-        summary::-webkit-details-marker {
-
-        }
     </style>
 </head>
 
@@ -164,13 +162,31 @@
     @endif
 
     @include('layout')
-    @include('section.banner')
-    @include('section.tentangKami')
-    @include('section.syaratKetentuan')
-    @include('section.faq')
-    @include('section.sineas')
-    @include('section.daftar')
-    @include('section.kontak')
+    <section id="banner" class="py-5">
+        @include('section.banner')
+    </section>
+    <section id="tentangKami" class="py-5">
+        @include('section.tentangKami')
+    
+    </section>
+    <section id="syarat" class="py-5">
+        @include('section.syaratKetentuan')
+    </section>
+    <section id="faq" class="py-5">
+        @include('section.faq')
+    </section>
+    <section id="sineas" class="py-5">
+
+        @include('section.sineas')
+    </section>
+    <section id="daftar-sineas" class="py-5">
+        @include('section.daftar')
+
+    </section>
+    <section id="kontak" class="py-5">
+        @include('section.kontak')
+        
+    </section>
 
     <footer class="py-5 border-top border-secondary border-opacity-10 mt-5">
         <div class="container text-center text-secondary small">
@@ -179,6 +195,36 @@
     </footer>
 
     <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.js') }}"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("#nav-menu .nav-link");
+
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        },
+        {
+            rootMargin: "-80px 0px -50% 0px",
+            threshold: 0
+        }
+    );
+
+    sections.forEach(section => observer.observe(section));
+});
+</script>
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>

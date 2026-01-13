@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeMail;
 use App\Models\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -27,20 +29,76 @@ class PageController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
-        $validasi = $request->validate([
-            'nama_sineas' => 'required|string|max:255',
-            'email' => 'required|string|unique:users,email',
-            'no_hp' => 'required|string',
-            'ketersediaan' => 'required|in:ya,tidak',
-            'recaptcha_token' => 'required',
-        ]);
+    // $validated = $request->validate([
+    //     'nama_sineas' => 'required|string|max:255',
+    //     'email' => 'required|email|unique:users,email',
+    //     'no_hp' => 'required|string',
+    //     'ketersediaan' => 'required|in:ya,tidak',
+    // ]);
 
-        Page::create($validasi);
+    // $page = Page::create([
+    //     'nama_sineas' => $validated['nama_sineas'],
+    //     'email' => $validated['email'],
+    //     'no_hp' => $validated['no_hp'],
+    //     'ketersediaan' => $validated['ketersediaan'],
+    // ]);
 
-        return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
+    // Mail::to($validated['email'])->send(
+    //     new WelcomeMail([
+    //         'nama' => $validated['nama_sineas'],
+    //         'email' => $validated['email'],
+    //         'no_hp' => $validated['no_hp'],
+    //         'ketersediaan' => $validated['ketersediaan'],
+    //     ])
+    // );
+
+    // return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
+
+
+    // 1. Validasi
+    $validated = $request->validate([
+        'nama_sineas' => 'required|string|max:255',
+        'email' => 'required|email|unique:users,email',
+        'no_hp' => 'required|string',
+        'ketersediaan' => 'required|in:ya,tidak',
+        'g-recaptcha-response' => 'required',
+    ]);
+
+    // 2. Verifikasi reCAPTCHA
+    $response = Http::asForm()->post(
+        'https://www.google.com/recaptcha/api/siteverify',
+        [
+            'secret' => config('services.recaptcha.secret'),
+            'response' => $request->input('g-recaptcha-response'),
+        ]
+    );
+
+    if (!$response->json('success')) {
+        return back()->withErrors(['captcha' => 'Captcha salah'])->withInput();
     }
+
+    $page = Page::create([
+        'nama_sineas' => $validated['nama_sineas'],
+        'email' => $validated['email'],
+        'no_hp' => $validated['no_hp'],
+        'ketersediaan' => $validated['ketersediaan'],
+    ]);
+
+    Mail::to($validated['email'])->send(
+        new WelcomeMail([
+            'nama' => $validated['nama_sineas'],
+            'email' => $validated['email'],
+            'no_hp' => $validated['no_hp'],
+            'ketersediaan' => $validated['ketersediaan'],
+        ])
+    );
+
+    return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
+}
+
 
 
 
@@ -63,8 +121,4 @@ class PageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Page $page)
-    {
-        //
-    }
 }
