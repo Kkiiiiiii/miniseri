@@ -16,9 +16,9 @@
                         <li><span>Email:</span> info@miniseri.id</li>
                     </ul>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <iframe src="" frameborder="0"></iframe>
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?" width="600" height="450" style="border: 0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+                </div>
             </div>
         </div>
     </section>
