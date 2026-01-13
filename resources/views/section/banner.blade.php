@@ -1,7 +1,19 @@
-<section class="position-relative d-flex align-items-center min-vh-100 px-3 pt-5">
+<style>
+    .fade-in-bottom {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.5s;
+    }
+
+    .fade-in-bottom.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+<section class="position-relative d-flex align-items-center min-vh-100 px-3 pt-5" >
         <div class="bg-glow top-0 end-0"></div>
 
-        <div class="container py-5">
+        <div class="container py-5  fade-in-bottom">
             <div class="row align-items-center gy-4">
 
                 <div class="col-lg-7 text-center text-lg-start order-2 order-lg-1">
@@ -44,3 +56,13 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const fadeInBottom = document.querySelector('.fade-in-bottom');
+            window.addEventListener('scroll', () => {
+                const i = fadeInBottom.getBoundingClientRect();
+                if(i.top < window.innerHeight){
+                    fadeInBottom.classList.add('show');
+                }
+            });
+    </script>

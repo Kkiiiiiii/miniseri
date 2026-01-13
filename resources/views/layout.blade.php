@@ -40,7 +40,7 @@
     }
 </style>
 
-<nav class="navbar navbar-expand-md fixed-top navbar-glass px-lg-4 py-3">
+<nav class="navbar navbar-expand-md fixed-top navbar-glass px-lg-4 py-3" id="navbar">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
             <img src="{{ asset('assets/image/miniseri.png') }}" alt="Logo" height="40">
