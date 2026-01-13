@@ -6,7 +6,15 @@
               <div class="bg-magenta-gradient mx-5 mb-5"
                   style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
                     {{-- <img src=""> --}}
-                    <h3 class="fw-bold text-secondary-emphasis mb-4">PT MINISERI SETIAP HARI</h3>
+                    <h4 class="fw-bold text-secondary-emphasis mb-4">PT MINISERI SETIAP HARI</h4>
+                    <p class="">EightyEight@Kasablanca Office Tower Lantai 10 Unit E
+                    Jl. Casablanca Kav. 88 Kel. Menteng Dalam Kec. Tebet
+                    <br>
+                    Jakarata Selatan</p>
+                    <ul style="list-style: none;">
+                        <li><span>Telephone:</span> 085141115592</li>
+                        <li><span>Email:</span> info@miniseri.id</li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-6">
