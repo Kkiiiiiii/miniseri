@@ -169,6 +169,7 @@
     @include('section.syaratKetentuan')
     @include('section.faq')
     @include('section.sineas')
+    @include('section.daftar')
     @include('section.kontak')
 
     <footer class="py-5 border-top border-secondary border-opacity-10 mt-5">
