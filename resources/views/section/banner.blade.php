@@ -9,8 +9,6 @@
         opacity: 1;
         transform: translateY(0) scale(1);
     }
-
-    
 </style>
 
 <section class="position-relative d-flex align-items-center min-vh-100 px-3 pt-5" id="banner">

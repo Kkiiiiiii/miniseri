@@ -5,7 +5,6 @@
     <title>Pendaftaran Sineas</title>
 </head>
 <body style="margin:0;padding:0;background-color:#f3f4f6;font-family:Arial,Helvetica,sans-serif;">
-
     <table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
         <tr>
             <td align="center">
@@ -14,17 +13,15 @@
                     box-shadow:0 4px 12px rgba(0,0,0,0.1);
                     padding:24px;">
 
-                    <!-- HEADER -->
                     <tr>
                         <td style="font-size:22px;font-weight:bold;color:#111827;padding-bottom:16px;">
-                            Halo {{ $data['nama'] }}
+                            Terima kasih sudah mendaftar sebagai <strong>Sineas</strong> 🎬
                         </td>
                     </tr>
 
-                    <!-- BODY -->
                     <tr>
                         <td style="font-size:15px;color:#374151;line-height:1.6;padding-bottom:16px;">
-                            Terima kasih sudah mendaftar sebagai <strong>sineas</strong> 🎬
+                            Nama Sineas <strong>{{ $data['nama'] }}</strong>
                         </td>
                     </tr>
 
@@ -56,11 +53,45 @@
                             <strong>{{ config('app.name') }}</strong>
                         </td>
                     </tr>
-
                 </table>
             </td>
         </tr>
     </table>
 
+
+      {{-- <div class="card">
+        <h4>Terima kasih sudah mendaftar sebagai <strong>Sineas</strong> 🎬</h4>
+        <div class="card-body">
+            <h5 class="card-title" style="font-size:22px;font-weight:bold;color:#111827;padding-bottom:16px;">
+                Data Pendaftaran
+            </h5>
+            <h6 style="font-weight:bold;width:140px;">
+                Nama :
+            </h6>
+            <p class="card-text">
+                {{ $data['nama'] }}</p>
+            <h6 style="font-weight:bold;width:140px;">
+                Email :
+            </h6>
+            <p class="card-text" >
+                {{ $data['email'] }}</p>
+            <h6 style="font-weight:bold;width:140px;">
+                No HP :
+            </h6>
+            <p class="card-text">
+                {{ $data['no_hp'] }}</p>
+                  <h6 style="font-weight:bold;width:140px;">
+                Ketersediaan :
+            </h6>
+            <p class="card-text">
+                {{ ucfirst($data['ketersediaan']) }}</p>
+                <h4 style="font-size:14px;color:#374151;">
+                            Kami akan menghubungi kalian secepatnya.
+                            <br><br>
+                            Terima kasih,<br>
+                            <strong>{{ config('app.name') }}</strong>
+                </h4>
+        </div>
+    </div> --}}
 </body>
 </html>

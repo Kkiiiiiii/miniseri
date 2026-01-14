@@ -71,13 +71,13 @@
     }
 
     .glass-card .icons{
-        all:unset;
+        all: unset;
         cursor: pointer;
         transition: transform 0.25s ease;
     }
 
     .glass-card .icons:hover{
-        transform: rotate(180deg);
+        transform: rotate(360deg);
     }
 
     .bg-glow {
