@@ -98,17 +98,17 @@
 
                     <div class="mb-3">
                         <label class="form-label fw-semibold small">Nama Sineas</label>
-                        <input type="text" class="form-control form-control-lg bg-light border-0" name="nama_sineas" required>
+                        <input type="text" class="form-control  bg-light border-0" name="nama_sineas" required>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label fw-semibold small">Email</label>
-                        <input type="email" class="form-control form-control-lg bg-light border-0" name="email" required>
+                        <input type="email" class="form-control  bg-light border-0" name="email" required>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label fw-semibold small">No HP</label>
-                        <input type="text" class="form-control form-control-lg bg-light border-0" name="no_hp" required>
+                        <input type="text" class="form-control bg-light border-0" name="no_hp" required>
                     </div>
 
                     <div class="mb-4">
