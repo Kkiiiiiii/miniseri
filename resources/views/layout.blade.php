@@ -113,17 +113,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll("#nav-menu .nav-link");
 
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
+
+
     const observer = new IntersectionObserver(
         entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const id = e.target.id;
 
                     navLinks.forEach(link => {
                         link.classList.remove("active");
                         if (link.getAttribute("href") === `#${id}`) {
                             link.classList.add("active");
                         }
+                        if(window.innerWidth < 768){
+                            bsCollapse.hide();
+                        }
+
                     });
                 }
             });

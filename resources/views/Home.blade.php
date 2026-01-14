@@ -167,7 +167,7 @@
     </section>
     <section id="tentangKami" class="py-5">
         @include('section.tentangKami')
-    
+
     </section>
     <section id="syarat" class="py-5">
         @include('section.syaratKetentuan')
@@ -185,7 +185,6 @@
     </section>
     <section id="kontak" class="py-5">
         @include('section.kontak')
-        
     </section>
 
     <footer class="py-5 border-top border-secondary border-opacity-10 mt-5">

@@ -28,7 +28,6 @@
                         </td>
                     </tr>
 
-                    <!-- LIST (Bootstrap-like) -->
                     <tr>
                         <td style="padding-bottom:16px;">
                             <table width="100%" cellpadding="6" cellspacing="0"
@@ -49,7 +48,6 @@
                         </td>
                     </tr>
 
-                    <!-- FOOTER -->
                     <tr>
                         <td style="font-size:14px;color:#374151;">
                             Kami akan menghubungi kalian secepatnya.

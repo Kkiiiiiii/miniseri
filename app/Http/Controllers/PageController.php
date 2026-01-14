@@ -58,7 +58,6 @@ class PageController extends Controller
     // return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
 
 
-    // 1. Validasi
     $validated = $request->validate([
         'nama_sineas' => 'required|string|max:255',
         'email' => 'required|email|unique:users,email',
@@ -67,7 +66,6 @@ class PageController extends Controller
         'g-recaptcha-response' => 'required',
     ]);
 
-    // 2. Verifikasi reCAPTCHA
     $response = Http::asForm()->post(
         'https://www.google.com/recaptcha/api/siteverify',
         [

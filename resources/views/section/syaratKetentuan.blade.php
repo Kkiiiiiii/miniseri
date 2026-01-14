@@ -15,9 +15,7 @@
                         penggunaan website dan layanan yang disediakan oleh kami untuk memastikan pengalaman yang aman
                         dan menyenangkan bagi semua pengguna.
                     </p>
-                    {{-- <a href="{{ asset('assets/ketentuan.pdf') }}" target="_blank">
-                    <button class="btn mt-3 btn-outline-primary">Baca Detail Lengkap</button>
-                </a> --}}
+
                     <div class="container">
                         <button type="button" data-bs-toggle="modal" data-bs-target="#pdf"
                             class="btn btn-outline-pink rounded-pill">
