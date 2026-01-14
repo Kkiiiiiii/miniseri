@@ -15,49 +15,11 @@ class PageController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view(view: 'home');
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
 
     public function store(Request $request)
     {
-    // $validated = $request->validate([
-    //     'nama_sineas' => 'required|string|max:255',
-    //     'email' => 'required|email|unique:users,email',
-    //     'no_hp' => 'required|string',
-    //     'ketersediaan' => 'required|in:ya,tidak',
-    // ]);
-
-    // $page = Page::create([
-    //     'nama_sineas' => $validated['nama_sineas'],
-    //     'email' => $validated['email'],
-    //     'no_hp' => $validated['no_hp'],
-    //     'ketersediaan' => $validated['ketersediaan'],
-    // ]);
-
-    // Mail::to($validated['email'])->send(
-    //     new WelcomeMail([
-    //         'nama' => $validated['nama_sineas'],
-    //         'email' => $validated['email'],
-    //         'no_hp' => $validated['no_hp'],
-    //         'ketersediaan' => $validated['ketersediaan'],
-    //     ])
-    // );
-
-    // return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
-
-
     $validated = $request->validate([
         'nama_sineas' => 'required|string|max:255',
         'email' => 'required|email|unique:users,email',
@@ -96,9 +58,6 @@ class PageController extends Controller
 
     return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
 }
-
-
-
 
     /**
      * Show the form for editing the specified resource.

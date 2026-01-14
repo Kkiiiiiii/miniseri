@@ -2,7 +2,6 @@
 .faq-item {
     max-width: 900px;
     margin: 0 auto 12px;
-    border-bottom: 1px solid #e5e7eb;
 }
 
 .faq-item summary {
