@@ -8,9 +8,9 @@
     </div>
 
     <h3 class="fw-bold text-secondary-emphasis mb-3">Daftar Film</h3>
-    {{-- <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
-        Berikut adalah beberapa daftar film yang bisa anda nikmati.
-    </p> --}}
+    <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
+        Berikut adalah beberapa daftar film utama dari Miniseri.id
+    </p>
 
     <div class="row g-4">
         <div class="col-md-4">

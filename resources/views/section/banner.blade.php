@@ -32,7 +32,7 @@
 
                 <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
                     <a href="https://play.google.com/store/apps/details?id=id.miniseri.mobile">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        <img src="{{ asset('assets/GooglePlay.svg') }}"
                              height="40" alt="Play Store">
                     </a>
                     <a href="https://apps.apple.com/id/app/miniseri/id6575369357?l=id">
@@ -59,7 +59,6 @@
                 <div class="bg-glow translate-middle start-50 top-50 d-none d-md-block"
                      style="width:300px;height:300px;opacity:0.5;"></div>
             </div>
-
         </div>
     </div>
 </section>

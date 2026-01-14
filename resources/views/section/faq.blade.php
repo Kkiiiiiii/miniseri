@@ -42,7 +42,6 @@
 </style>
 
     <div class="container py-5">
-
         <div class="text-center">
             <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">
                 Frequently Asked Question
@@ -128,5 +127,4 @@
                 dan media sosial resmi Miniseri.id.
             </p>
         </details>
-
-    </div>
+</div>
