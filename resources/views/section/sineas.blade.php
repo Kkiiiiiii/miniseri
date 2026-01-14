@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="p-4">
-                    <h4 class="h6 fw-bold mb-1">ABCD</h4>
+                    <h4 class="h6 fw-bold mb-1">Episode 10</h4>
                     <p class="text-magenta-gradient fw-bold small mb-0">Text</p>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                         alt="Film">
                 </div>
                 <div class="p-4">
-                    <h4 class="h6 fw-bold mb-1">123</h4>
+                    <h4 class="h6 fw-bold mb-1">Episode 3</h4>
                     <p class="text-magenta-gradient fw-bold small mb-0">Text</p>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                         alt="Film">
                 </div>
                 <div class="p-4">
-                    <h4 class="h6 fw-bold mb-1">ADZS</h4>
+                    <h4 class="h6 fw-bold mb-1">Episode 6</h4>
                     <p class="text-magenta-gradient fw-bold small mb-0">Text</p>
                 </div>
             </div>
