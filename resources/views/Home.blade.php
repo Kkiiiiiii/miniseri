@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,112 +10,6 @@
     <link rel="icon" href="{{ asset('assets/image/miniseri.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: white;
-            overflow-x: hidden;
-        }
-
-        /* Custom Utilities untuk kemiripan dengan Tailwind */
-        .text-magenta-gradient {
-            background: linear-gradient(to right, #d63384, #ff758f);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .glass-card:hover {
-            border-color: rgba(214, 51, 132, 0.5);
-            transform: translateY(-5px);
-        }
-
-        .bg-glow {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: rgba(214, 51, 132, 0.1);
-            filter: blur(120px);
-            border-radius: 50%;
-            z-index: -1;
-        }
-
-        /* Phone Frame Styling */
-        .phone-mockup {
-            width: 280px;
-            height: 580px;
-            background: #171717;
-            border-radius: 3rem;
-            border: 8px solid #262626;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            outline: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .badge-pink {
-            background: rgba(214, 51, 132, 0.2);
-            color: #d63384;
-            font-weight: bold;
-            letter-spacing: 1px;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            display: inline-block;
-        }
-
-        .btn-pink {
-            background-color: #d63384;
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            transition: 0.3s;
-        }
-
-        .btn-outline-pink {
-            background-color: #d63384;
-            border: 2px solid #d63384;
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline-pink:hover {
-            background-color: #fff;
-            color: #d63384;
-            border-color: #d63384;
-        }
-
-        .btn-pink:hover {
-            background-color: #b02a6a;
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .modal-content {
-            border-radius: 1.5rem;
-            border: none;
-        }
-
-        details summary{
-            cursor: pointer;
-            float: left;
-        }
-        body {
-    padding-top: 90px;
-}
-
-
-    </style>
 </head>
 
 <body>
@@ -165,24 +58,27 @@
     <section id="banner" class="py-5">
         @include('section.banner')
     </section>
+
     <section id="tentangKami" class="py-5">
         @include('section.tentangKami')
-
     </section>
+
     <section id="syarat" class="py-5">
         @include('section.syaratKetentuan')
     </section>
+
     <section id="faq" class="py-5">
         @include('section.faq')
     </section>
-    <section id="sineas" class="py-5">
 
+    <section id="sineas" class="py-5">
         @include('section.sineas')
     </section>
+
     <section id="daftar-sineas" class="py-5">
         @include('section.daftar')
-
     </section>
+
     <section id="kontak" class="py-5">
         @include('section.kontak')
     </section>
@@ -195,7 +91,7 @@
 
     <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.js') }}"></script>
     <script>
-document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll("#nav-menu .nav-link");
 

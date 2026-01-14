@@ -18,7 +18,8 @@
     }
 
     .nav-link.active {
-        color: #d63384 !important; /* Pink Magenta */
+        color: #d63384 !important;
+        /* Pink Magenta */
         font-weight: 800;
     }
 
@@ -38,13 +39,113 @@
     .navbar-toggler:focus {
         box-shadow: none;
     }
-        html {
-    scroll-behavior: smooth;
-}
-body {
-    padding-top: 90px; /* sesuaikan tinggi navbar */
-}
 
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0a;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    .text-magenta-gradient {
+        background: linear-gradient(to right, #d63384, #ff758f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+        border-color: rgba(214, 51, 132, 0.5);
+        transform: translateY(-5px);
+    }
+
+    .bg-glow {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: rgba(214, 51, 132, 0.1);
+        filter: blur(120px);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    /* Phone Frame Styling */
+    .phone-mockup {
+        width: 280px;
+        height: 580px;
+        background: #171717;
+        border-radius: 3rem;
+        border: 8px solid #262626;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        outline: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .badge-pink {
+        background: rgba(214, 51, 132, 0.2);
+        color: #d63384;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        display: inline-block;
+    }
+
+    .btn-pink {
+        background-color: #d63384;
+        color: white;
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        transition: 0.3s;
+    }
+
+    .btn-outline-pink {
+        background-color: #d63384;
+        border: 2px solid #d63384;
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-pink:hover {
+        background-color: #fff;
+        color: #d63384;
+        border-color: #d63384;
+    }
+
+    .btn-pink:hover {
+        background-color: #b02a6a;
+        color: white;
+        transform: scale(1.05);
+    }
+
+    .modal-content {
+        border-radius: 1.5rem;
+        border: none;
+    }
+
+    details summary {
+        cursor: pointer;
+        float: left;
+    }
+
+    body {
+        padding-top: 90px;
+    }
 </style>
 
 <nav class="navbar navbar-expand-md fixed-top navbar-glass px-lg-4 py-3" id="navbar">
@@ -88,62 +189,41 @@ body {
     </div>
 </nav>
 
-{{-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const navLinks = document.querySelectorAll('#nav-menu .nav-link');
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navLinks.forEach(btn => btn.classList.remove('active'));
-
-                this.classList.add('active');
-
-                // (Opsional) Tutup menu mobile otomatis setelah klik (untuk UX yang lebih baik)
-                if (window.innerWidth < 768) {
-                    bsCollapse.hide();
-                }
-            });
-        });
-    });
-</script> --}}
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll("#nav-menu .nav-link");
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll("#nav-menu .nav-link");
 
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+        });
 
 
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    const id = e.target.id;
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        const id = e.target.id;
 
-                    navLinks.forEach(link => {
-                        link.classList.remove("active");
-                        if (link.getAttribute("href") === `#${id}`) {
-                            link.classList.add("active");
-                        }
-                        if(window.innerWidth < 768){
-                            bsCollapse.hide();
-                        }
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href") === `#${id}`) {
+                                link.classList.add("active");
+                            }
+                            if (window.innerWidth < 768) {
+                                bsCollapse.hide();
+                            }
 
-                    });
-                }
-            });
-        },
-        {
-            rootMargin: "-80px 0px -50% 0px",
-            threshold: 0
-        }
-    );
+                        });
+                    }
+                });
+            }, {
+                rootMargin: "-80px 0px -50% 0px",
+                threshold: 0
+            }
+        );
 
-    sections.forEach(section => observer.observe(section));
-});
+        sections.forEach(section => observer.observe(section));
+    });
 </script>
-
-
