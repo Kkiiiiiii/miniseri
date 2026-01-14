@@ -36,7 +36,7 @@
                              height="40" alt="Play Store">
                     </a>
                     <a href="https://apps.apple.com/id/app/miniseri/id6575369357?l=id">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        <img src="{{ asset('assets/AppStore.svg') }}"
                              height="40" alt="App Store">
                     </a>
                 </div>
@@ -48,7 +48,6 @@
                         src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop"
                         class="w-100 h-100 object-fit-cover opacity-75"
                         alt="Preview">
-
                     <div class="position-absolute bottom-0 start-0 p-4 w-100 text-start"
                          style="background:linear-gradient(transparent,rgba(0,0,0,0.9))">
                         <p class="text-magenta-gradient fw-bold mb-0 small">Episode 05</p>
