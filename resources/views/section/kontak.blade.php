@@ -1,6 +1,5 @@
   <div class="container-fluid py-5">
         <div class="row g-0 align-items-stretch">
-
             <div class="col-md-6 d-flex flex-column justify-content-center px-4 px-md-5 py-4">
                 <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">
                     Contact

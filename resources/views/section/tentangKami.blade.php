@@ -15,11 +15,13 @@
                     <div class="glass-card p-5 h-100">
                         <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
                             style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
-                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
+                           <div class="icons">
+                             <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
                                 viewBox="0 0 16 16">
                                 <path
                                     d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                             </svg>
+                           </div>
                         </div>
                         <h4 class="fw-bold mb-3">Hiburan Tanpa Batas</h4>
                         <p class="text-secondary small">Terdapat mini series yang bisa dinikmati oleh semua kalangan.
@@ -30,11 +32,13 @@
                     <div class="glass-card p-5 h-100">
                         <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
                             style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
-                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
+                           <div class="icons">
+                             <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
                                 viewBox="0 0 16 16">
                                 <path
                                     d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9A1.5 1.5 0 0 1 1.5 3H2V1.78a1.5 1.5 0 0 1 1.864-1.454L12.136.326zM5 3h6V1.78a.5.5 0 0 0-.621-.485L5.429 2.54A.5.5 0 0 0 5 3z" />
                             </svg>
+                           </div>
                         </div>
                         <h4 class="fw-bold mb-3">Monetisasi Konten</h4>
                         <p class="text-secondary small">Creator dapat memonetisasi konten mini series yang dibuat.</p>
@@ -44,11 +48,13 @@
                     <div class="glass-card p-5 h-100">
                         <div class="mx-auto mb-4 d-flex align-items-center justify-content-center"
                             style="width: 60px; height: 60px; background: rgba(214, 51, 132, 0.1); border-radius: 15px;">
-                            <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
+                          <div class="icons">
+                              <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
                                 viewBox="0 0 16 16">
                                 <path
                                     d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5v-5A3.5 3.5 0 0 0 10.5 2h-5zm.5 3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z" />
                             </svg>
+                          </div>
                         </div>
                         <h4 class="fw-bold mb-3">Gratis & Berbayar</h4>
                         <p class="text-secondary small">Terdapat pilihan konten sesuai dengan preferensi pengguna.</p>

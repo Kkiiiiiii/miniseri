@@ -70,6 +70,16 @@
         transform: translateY(-5px);
     }
 
+    .glass-card .icons{
+        all:unset;
+        cursor: pointer;
+        transition: transform 0.25s ease;
+    }
+
+    .glass-card .icons:hover{
+        transform: rotate(180deg);
+    }
+
     .bg-glow {
         position: absolute;
         width: 500px;
