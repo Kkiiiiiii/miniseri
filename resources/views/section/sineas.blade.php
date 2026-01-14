@@ -17,7 +17,7 @@
             <div class="glass-card h-100 overflow-hidden text-start">
                 <div class="ratio ratio-4x3">
                     <img
-                        src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop"
+                        src="{{ asset('assets/image/background1.jpg') }}"
                         class="w-100 h-100 object-fit-cover"
                         alt="Film">
                 </div>
@@ -33,7 +33,7 @@
             <div class="glass-card h-100 overflow-hidden text-start">
                 <div class="ratio ratio-4x3">
                     <img
-                        src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop"
+                        src="{{ asset('assets/image/background2.jpg') }}"
                         class="w-100 h-100 object-fit-cover"
                         alt="Film">
                 </div>
@@ -48,7 +48,7 @@
             <div class="glass-card h-100 overflow-hidden text-start">
                 <div class="ratio ratio-4x3">
                     <img
-                        src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop"
+                        src="{{ asset('assets/image/background3.jpg') }}"
                         class="w-100 h-100 object-fit-cover"
                         alt="Film">
                 </div>

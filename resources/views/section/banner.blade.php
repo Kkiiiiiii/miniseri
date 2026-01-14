@@ -45,7 +45,7 @@
             <div class="col-lg-5 d-flex justify-content-center position-relative order-1 order-lg-2 mb-5 mb-lg-0">
                 <div class="phone-mockup">
                     <img
-                        src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop"
+                        src="{{ asset('assets/image/background2.jpg') }}"
                         class="w-100 h-100 object-fit-cover opacity-75"
                         alt="Preview">
                     <div class="position-absolute bottom-0 start-0 p-4 w-100 text-start"
