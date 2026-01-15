@@ -7,7 +7,7 @@
         style="height:4px;width:80px;background:#d63384;border-radius:10px;">
     </div>
 
-    <h3 class="fw-bold text-secondary-emphasis mb-3">Daftar Film</h3>
+    <h3 class="fw-bold text-secondary-emphasis mb-3">Trending Minggu Ini</h3>
     <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
         Berikut adalah beberapa daftar film utama dari Miniseri.id
     </p>

@@ -62,9 +62,10 @@ class PageController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Page $page)
+    public function show()
     {
-        //
+        $sinea = Page::all();
+        return view('management.index', compact('sinea'));
     }
 
     /**
