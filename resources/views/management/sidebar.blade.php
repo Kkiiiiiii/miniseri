@@ -5,7 +5,7 @@
         overflow-x: hidden;
     }
   </style>
-  <aside id="layout-menu" class="layout-menu menu-vertical menu bg-glow">
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-glow">
           <div class="app-brand demo">
            <a href="index.html" class="app-brand-link">
                   <span class="app-brand-logo demo">
@@ -24,9 +24,8 @@
           <div class="menu-inner-shadow"></div>
 
           <ul class="menu-inner py-1">
-            <!-- Page -->
             <li class="menu-item {{ request()->routeIs('index') ? 'active' : '' }}">
-              <a href="{{ route('index') }}" class="menu-link">
+            <a href="{{ route('index') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-smart-home"></i>
                 <div data-i18n="Page 1">Dashboard</div>
               </a>
