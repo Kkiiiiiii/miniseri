@@ -64,8 +64,13 @@ class PageController extends Controller
      */
     public function show()
     {
+        return view('management.index');
+    }
+
+    public function sinea()
+    {
         $sinea = Page::all();
-        return view('management.index', compact('sinea'));
+        return view('management.pendaftaran', compact('sinea'));
     }
 
     /**

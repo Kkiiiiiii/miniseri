@@ -28,13 +28,13 @@
             <li class="menu-item {{ request()->routeIs('index') ? 'active' : '' }}">
               <a href="{{ route('index') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-smart-home"></i>
-                <div data-i18n="Page 1">Emails</div>
+                <div data-i18n="Page 1">Dashboard</div>
               </a>
             </li>
-            <li class="menu-item ">
-              <a href="" class="menu-link">
+            <li class="menu-item {{ request()->routeIs('index') ? 'active' : '' }}">
+              <a href="{{ route('pendaftaran') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-users"></i>
-                <div data-i18n="Page 2">None</div>
+                <div data-i18n="Page 2">Data Pendaftaran</div>
               </a>
             </li>
           </ul>

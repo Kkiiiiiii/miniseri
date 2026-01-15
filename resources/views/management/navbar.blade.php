@@ -8,7 +8,6 @@
   <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-glow" id="layout-navbar">
       <div class="container-xxl">
           <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4">
-                  </span>
                   <span class="app-brand-text demo menu-text fw-bold">Management Email</span>
               </a>
           </div>
@@ -47,8 +46,7 @@
                   <li class="nav-item navbar-dropdown dropdown-user dropdown">
                       <ul class="dropdown-menu dropdown-menu-end">
                           <li>
-
-                                  <div class="d-grid px-2 pt-2 pb-1">
+                        <div class="d-grid px-2 pt-2 pb-1">
                             <form method="POST" action="">
                                 @csrf
                                 <button type="submit" class="btn btn-sm btn-danger d-flex w-100">
