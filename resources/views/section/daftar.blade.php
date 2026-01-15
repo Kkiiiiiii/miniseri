@@ -39,10 +39,6 @@
     #daftar-sineas .hero-content h3 {
         text-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
-
-    .form-check-input {
-
-    }
 </style>
 
     <div class="container-fluid py-5">

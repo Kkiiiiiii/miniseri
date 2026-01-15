@@ -82,8 +82,8 @@
     <section id="kontak" class="py-5">
         @include('section.kontak')
     </section>
-{{--
-    <footer class="py-5 border-top border-secondary border-opacity-10 mt-5">
+
+{{--<footer class="py-5 border-top border-secondary border-opacity-10 mt-5">
         <div class="container text-center text-secondary small">
             <p>© 2026 Miniseri All rights reserved.</p>
         </div>

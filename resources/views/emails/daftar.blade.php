@@ -57,41 +57,5 @@
             </td>
         </tr>
     </table>
-
-
-      {{-- <div class="card">
-        <h4>Terima kasih sudah mendaftar sebagai <strong>Sineas</strong> 🎬</h4>
-        <div class="card-body">
-            <h5 class="card-title" style="font-size:22px;font-weight:bold;color:#111827;padding-bottom:16px;">
-                Data Pendaftaran
-            </h5>
-            <h6 style="font-weight:bold;width:140px;">
-                Nama :
-            </h6>
-            <p class="card-text">
-                {{ $data['nama'] }}</p>
-            <h6 style="font-weight:bold;width:140px;">
-                Email :
-            </h6>
-            <p class="card-text" >
-                {{ $data['email'] }}</p>
-            <h6 style="font-weight:bold;width:140px;">
-                No HP :
-            </h6>
-            <p class="card-text">
-                {{ $data['no_hp'] }}</p>
-                  <h6 style="font-weight:bold;width:140px;">
-                Ketersediaan :
-            </h6>
-            <p class="card-text">
-                {{ ucfirst($data['ketersediaan']) }}</p>
-                <h4 style="font-size:14px;color:#374151;">
-                            Kami akan menghubungi kalian secepatnya.
-                            <br><br>
-                            Terima kasih,<br>
-                            <strong>{{ config('app.name') }}</strong>
-                </h4>
-        </div>
-    </div> --}}
 </body>
 </html>

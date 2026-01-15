@@ -18,7 +18,7 @@
         <div class="row align-items-center gy-4">
 
             <div class="col-lg-7 text-center text-lg-start order-2 order-lg-1">
-                <span class="badge-pink mb-3 text-uppercase small">Streaming Video Pendek #1</span>
+                {{-- <span class="badge-pink mb-3 text-uppercase small">Streaming Video Pendek #1</span> --}}
 
                 <h1 class="display-4 mb-4">
                     Serunya Nonton Miniseri <br>

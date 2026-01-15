@@ -24,7 +24,7 @@
                            </div>
                         </div>
                         <h4 class="fw-bold mb-3">Hiburan Tanpa Batas</h4>
-                        <p class="text-secondary small">Terdapat mini series yang bisa dinikmati oleh semua kalangan.
+                        <p class="text-secondary small">Terdapat mini series yang bisa dinikmati oleh semua kalangan
                         </p>
                     </div>
                 </div>
@@ -41,7 +41,8 @@
                            </div>
                         </div>
                         <h4 class="fw-bold mb-3">Monetisasi Konten</h4>
-                        <p class="text-secondary small">Creator dapat memonetisasi konten mini series yang dibuat.</p>
+                        <p class="text-secondary small">Creator dapat memonetisasi konten mini series yang dibuat dan mendapatkan keuntungan
+                </p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -51,13 +52,13 @@
                           <div class="icons">
                               <svg width="24" height="24" fill="currentColor" class="text-magenta-gradient"
                                 viewBox="0 0 16 16">
-                                <path
-                                    d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5v-5A3.5 3.5 0 0 0 10.5 2h-5zm.5 3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z" />
+                                <path d="M7.5 1L3 9h3l-1 6 6.5-8h-3l1-6z"/>
                             </svg>
                           </div>
                         </div>
                         <h4 class="fw-bold mb-3">Gratis & Berbayar</h4>
-                        <p class="text-secondary small">Terdapat pilihan konten sesuai dengan preferensi pengguna.</p>
+                        <p class="text-secondary small">Terdapat konten gratis dan berbayar yang bisa dinikmati oleh semua pengguna
+</p>
                     </div>
                 </div>
             </div>
