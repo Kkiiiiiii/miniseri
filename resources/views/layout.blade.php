@@ -8,7 +8,7 @@
     .nav-link {
         color: #d1d5db !important;
         font-size: 0.875rem;
-        font-weight: 500;
+        font-weight: 800;
         transition: all 0.3s ease;
         position: relative;
     }

@@ -39,6 +39,10 @@
     #daftar-sineas .hero-content h3 {
         text-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
+
+    .form-check-input {
+
+    }
 </style>
 
     <div class="container-fluid py-5">
@@ -126,9 +130,9 @@
                     </div>
 
                     <div class="form-check small text-muted mb-4">
-                        <input class="form-check-input" type="checkbox" required>
+                        <input class="form-check-input border-dark" type="checkbox" required>
                         <label class="form-check-label">
-                            Dengan ini saya menyatakan memiliki hak penuh atas karya yang didaftarkan
+                            Dengan ini saya yang memiliki hak penuh atas kepemilikan karya, dengan sadar dan tanpa paksaan mendaftarkan karya saya untuk dapat ditayangkan dan dipasarkan di platform miniseri.id
                         </label>
                     </div>
 
