@@ -1,0 +1,44 @@
+/* Parent dropdown aktif */
+#layout-menu .menu-item.active.open > .menu-link {
+    background-color: rgba(214, 51, 132, 0.12) !important;
+    color: #d63384 !important;
+}
+/* FORCE override warna aktif (parent & child) */
+#layout-menu .menu-item.active > .menu-link {
+    background-color: rgba(214, 51, 132, 0.12) !important;
+    color: #d63384 !important;
+    border-radius: 12px;
+}
+
+
+/* Icon parent dropdown */
+#layout-menu .menu-item.active > .menu-link.menu-toggle i {
+    color: #d63384 !important;
+}
+
+/* Submenu aktif */
+#layout-menu .menu-sub .menu-item.active > .menu-link {
+    background-color: rgba(214, 51, 132, 0.1) !important;
+    border-radius: 15px !important;
+    color: #d63384 !important;
+}
+
+/* MATIIN GRADIENT ACTIVE SNEAT */
+#layout-menu .menu-item.active > .menu-link {
+    background-image: none !important;
+    background-color: rgba(214, 51, 132, 0.12) !important;
+    color: #d63384 !important;
+    border-radius: 12px;
+}
+
+/* Icon submenu aktif */
+#layout-menu .menu-sub .menu-item.active > .menu-link i {
+    color: #d63384 !important;
+}
+
+/* Hover submenu */
+#layout-menu .menu-sub .menu-item > .menu-link:hover {
+    background-color: rgba(214, 51, 132, 0.1) !important;
+    border-radius: 15px !important;
+    color: #d63384 !important;
+}

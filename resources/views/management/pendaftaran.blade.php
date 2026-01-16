@@ -1,6 +1,6 @@
 @extends('management.layout')
 @section('content')
-  <div class="container">
+    <div class="container">
 
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show">
@@ -20,9 +20,9 @@
         @endif
 
         <div class="card">
-    <div class="d-flex justify-content-between align-items-center">
-        <h5 class="card-header mb-0">Data Pendaftaran</h5>
-</div>
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-header mb-0">Data Pendaftaran</h5>
+            </div>
             <div class="table-responsive text-nowrap">
                 <table class="table table-hover">
                     <thead class="table-dark">
@@ -49,12 +49,10 @@
                                             <i class="ti ti-dots-vertical"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <button class="dropdown-item" data-bs-toggle="modal"
-                                                data-bs-target="#editData">
+                                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editData">
                                                 <i class="ti ti-pencil me-1"></i> Edit
                                             </button>
-                                            <form action=""
-                                                method="POST">
+                                            <form action="{{ route('delete-daftar', $s->id) }}" method="POST">
                                                 @csrf
                                                 <button class="dropdown-item text-danger"
                                                     onclick="return confirm('Yakin Hapus Data Pendidikan {{ $s->nama_sineas }}' + '?')">
@@ -74,8 +72,7 @@
 
                                             <h4 class="text-center mb-4">Edit Data</h4>
 
-                                            <form method="POST"
-                                                action="">
+                                            <form method="POST" action="">
                                                 @csrf
 
                                                 <div class="row g-3">
@@ -119,7 +116,7 @@
                 </table>
             </div>
             <div class="mt-3 d-flex justify-content-center">
-           {{-- {{ $sinea->links()}} --}}
+                {{-- {{ $sinea->links()}} --}}
             </div>
         </div>
 

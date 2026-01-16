@@ -1,11 +1,12 @@
 <!doctype html>
+
 <html
   lang="en"
   class="light-style layout-navbar-fixed layout-menu-fixed layout-compact"
   dir="ltr"
   data-theme="theme-default"
   data-assets-path="../../assets/"
-  data-template="vertical-menu-template-starter"
+  data-template="vertical-menu-template"
   data-style="light">
   <head>
     <meta charset="utf-8" />
@@ -13,12 +14,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-      <title>@yield('title')</title>
+    <title>Miniseri | Admin</title>
 
     <meta name="description" content="" />
 
-    <!-- Favicon -->
     <link rel="icon" href="{{ asset('assets/image/miniseri.png') }}">
+    
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,9 +28,10 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
       rel="stylesheet" />
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
     <link rel="stylesheet" href="../../assets/vendor/fonts/tabler-icons.css" />
-    <!-- <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" /> -->
-    <!-- <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" /> -->
+    <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
 
     <!-- Core CSS -->
 
@@ -42,8 +44,17 @@
     <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
 
     <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/swiper/swiper.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
 
     <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/vendor/css/pages/cards-advance.css" />
+	<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+	
 
     <!-- Helpers -->
     <script src="../../assets/vendor/js/helpers.js"></script>
@@ -61,20 +72,23 @@
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
         <!-- Menu -->
-        @include('management.sidebar')
+		@include('management.sidebar')
         <!-- / Menu -->
 
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
-         @include('management.navbar')
+
+    @include('management.navbar')
+
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
+
             <div class="container-xxl flex-grow-1 container-p-y">
-              @yield('content')
+            @yield('content')
             </div>
             <!-- / Content -->
 
@@ -102,16 +116,21 @@
     <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
     <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
-
+    <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
     <script src="../../assets/vendor/js/menu.js"></script>
 
     <!-- endbuild -->
 
     <!-- Vendors JS -->
+    <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="../../assets/vendor/libs/swiper/swiper.js"></script>
+    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
     <!-- Main JS -->
     <script src="../../assets/js/main.js"></script>
 
     <!-- Page JS -->
+    <script src="../../assets/js/dashboards-analytics.js"></script>
   </body>
 </html>

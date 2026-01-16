@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\WelcomeMail;
 use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 
@@ -81,7 +82,9 @@ class PageController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function delete($id)
+    {
+        Page::find($id)->delete();
+        return redirect()->back()->with('success', 'Data Pendaftaran dihapus');
+    }
 }

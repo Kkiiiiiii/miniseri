@@ -1,40 +1,45 @@
-  <style>
-    .bg-glow {
-       background-color: #0a0a0a;
-        color: white;
-        overflow-x: hidden;
-    }
-  </style>
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-glow">
-          <div class="app-brand demo">
+ <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+       <div class="app-brand demo">
            <a href="index.html" class="app-brand-link">
-                  <span class="app-brand-logo demo">
-              <span class="app-brand-logo demo">
-                   <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
-            <img src="{{ asset('assets/image/miniseri.png') }}" alt="Logo" height="40">
-            <span class="fs-4">MINISERI</span>
-            </a>
+               <span class="app-brand-logo demo">
+                   <img src="{{ asset('assets/image/miniseri.png') }}" class="w-75 h-auto rounded">
+               </span>
+               <span class="app-brand-text demo menu-text fw-bold">Miniseri</span>
+           </a>
 
-            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-              <i class="ti menu-toggle-icon d-none d-xl-block align-middle"></i>
-              <i class="ti ti-x d-block d-xl-none ti-md align-middle"></i>
-            </a>
-          </div>
+           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+               <i class="ti menu-toggle-icon d-none d-xl-block align-middle"></i>
+               <i class="ti ti-x d-block d-xl-none ti-md align-middle"></i>
+           </a>
+       </div>
 
-          <div class="menu-inner-shadow"></div>
+       <div class="menu-inner-shadow"></div>
 
-          <ul class="menu-inner py-1">
+      <ul class="menu-inner py-1">
+    <li class="menu-item {{ request()->routeIs('index', 'pendaftaran*') ? 'active open' : '' }}">
+        <a href="javascript:void(0)" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons ti ti-smart-home"></i>
+            <div>Menu</div>
+        </a>
+
+        <ul class="menu-sub">
+
             <li class="menu-item {{ request()->routeIs('index') ? 'active' : '' }}">
-            <a href="{{ route('index') }}" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-smart-home"></i>
-                <div data-i18n="Page 1">Dashboard</div>
-              </a>
+                <a href="{{ route('index') }}" class="menu-link">
+                    <div>Dashboard</div>
+                </a>
             </li>
-            <li class="menu-item {{ request()->routeIs('index') ? 'active' : '' }}">
-              <a href="{{ route('pendaftaran') }}" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-users"></i>
-                <div data-i18n="Page 2">Data Pendaftaran</div>
-              </a>
+
+            <li class="menu-item {{ request()->routeIs('pendaftaran*') ? 'active' : '' }}">
+                <a href="{{ route('pendaftaran') }}" class="menu-link">
+                    <div>Data Pendaftaran</div>
+                </a>
             </li>
-          </ul>
-</aside>
+
+        </ul>
+    </li>
+</ul>
+
+
+
+   </aside>
