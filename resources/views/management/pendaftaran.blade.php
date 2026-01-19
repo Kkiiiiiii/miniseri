@@ -49,7 +49,7 @@
                                             <i class="ti ti-dots-vertical"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editData">
+                                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editData{{ $s->id }}">
                                                 <i class="ti ti-pencil me-1"></i> Edit
                                             </button>
                                             <form action="{{ route('delete-daftar', $s->id) }}" method="POST">
@@ -70,33 +70,36 @@
                                         <div class="modal-body">
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 
-                                            <h4 class="text-center mb-4">Edit Data</h4>
+                                            <h4 class="text-center mb-4">Ubah Data Pendaftaran</h4>
 
-                                            <form method="POST" action="">
+                                            <form method="POST" action="{{ route('update-daftar', $s->id) }}">
                                                 @csrf
 
                                                 <div class="row g-3">
-                                                    <div class="col-md-6">
+                                                    <div class="mb-3">
                                                         <label class="form-label">Nama Sinea</label>
-                                                        <input type="text" name="nama_sineas" value="">
+                                                        <input type="text" name="nama_sineas" class="form-control"
+                                                        value="{{ $s->nama_sineas }}">
                                                     </div>
 
-                                                    <div class="col-md-6">
+                                                    <div class="mb-3">
                                                         <label class="form-label">Email</label>
                                                         <input type="text" name="email" class="form-control"
-                                                            value="">
+                                                            value="{{ $s->email }}">
                                                     </div>
 
-                                                    <div class="col-md-6">
+                                                    <div class="mb-3">
                                                         <label class="form-label">No HP</label>
                                                         <input type="number" name="no_hp" class="form-control"
-                                                            value="">
+                                                            value="{{ $s->no_hp }}">
                                                     </div>
 
-                                                    <div class="col-md-6">
+                                                    <div class="mb-3">
                                                         <label class="form-label">Ketersediaan</label>
-                                                        <input type="text" name="ketersediaan" class="form-control"
-                                                            value="">
+                                                        <select name="ketersediaan" class="form-select">
+                                                            <option value="ya" {{ $s->ketersediaan == 'ya' ? 'selected' : '' }}>Ya</option>
+                                                            <option value="tidak" {{  $s->ketersediaan == 'tidak' ? 'selected' : '' }}>Tidak</option>
+                                                        </select>
                                                     </div>
 
 

@@ -79,9 +79,35 @@ class PageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Page $page)
+    public function update(Request $request, $id)
     {
-        //
+        $sinea = Page::find($id);
+
+        $request->validate([
+            'nama_sineas' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'no_hp' => 'required|string',
+            'ketersediaan' => 'required|in:ya,tidak',
+        ]);
+
+        $sinea->nama_sineas = $request->nama_sineas;
+        $sinea->email = $request->email;
+        $sinea->no_hp = $request->no_hp;
+        $sinea->ketersediaan = $request->ketersediaan;
+
+        $sinea->update();
+
+        Mail::to($sinea['email'])->send(
+        new WelcomeMail([
+            'nama' => $sinea['nama_sineas'],
+            'email' => $sinea['email'],
+            'no_hp' => $sinea['no_hp'],
+            'ketersediaan' => $sinea['ketersediaan'],
+        ])
+    );
+
+        return redirect()->back()->with('success', 'Data Pendaftaran Berhasil Diupdate');
+
     }
 
     public function delete($id)
