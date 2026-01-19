@@ -13,6 +13,10 @@
         position: relative;
     }
 
+    .cursor {
+        cursor: pointer
+    }
+
     .nav-link:hover {
         color: #f472b6 !important;
     }

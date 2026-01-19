@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\WelcomeMail;
+use App\Models\Gambar;
 use App\Models\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
@@ -16,7 +17,8 @@ class PageController extends Controller
      */
     public function index()
     {
-        return view(view: 'home');
+        $data['gambar'] = Gambar::all();
+        return view( 'home', $data );
     }
 
     public function store(Request $request)

@@ -13,50 +13,53 @@
     </p>
 
     <div class="row g-4">
-        <div class="col-md-4">
-            <div class="glass-card h-100 overflow-hidden text-start">
-                <div class="ratio ratio-4x3">
-                    <img
-                        src="{{ asset('assets/image/background1.jpg') }}"
-                        class="w-100 h-100 object-fit-cover"
-                        alt="Film">
-                </div>
-
-                <div class="p-4">
-                    <h4 class="h6 fw-bold mb-1">Episode 10</h4>
-                    <p class="text-magenta-gradient fw-bold small mb-0">Text</p>
-                </div>
-            </div>
+        @foreach ($gambar as $d)
+<div class="col-md-4">
+    <div class="glass-card h-100">
+        <div class="ratio ratio-4x3">
+            <img src="{{ asset('storage/' . $d->image) }}" class="w-100 h-100 object-fit-cover">
         </div>
 
-        <div class="col-md-4">
-            <div class="glass-card h-100 overflow-hidden text-start">
-                <div class="ratio ratio-4x3">
-                    <img
-                        src="{{ asset('assets/image/background2.jpg') }}"
-                        class="w-100 h-100 object-fit-cover"
-                        alt="Film">
-                </div>
-                <div class="p-4">
-                    <h4 class="h6 fw-bold mb-1">Episode 3</h4>
-                    <p class="text-magenta-gradient fw-bold small mb-0">Text</p>
-                </div>
-            </div>
+        <div class="p-4">
+            <h4 class="h6 fw-bold">{{ $d->judul }}</h4>
+            <p class="text-magenta-gradient fw-bold small cursor"
+               data-bs-toggle="modal"
+               data-bs-target="#details{{ $d->id }}">
+               Lihat Detail
+            </p>
         </div>
+    </div>
+</div>
 
-        <div class="col-md-4">
-            <div class="glass-card h-100 overflow-hidden text-start">
-                <div class="ratio ratio-4x3">
-                    <img
-                        src="{{ asset('assets/image/background3.jpg') }}"
-                        class="w-100 h-100 object-fit-cover"
-                        alt="Film">
-                </div>
-                <div class="p-4">
-                    <h4 class="h6 fw-bold mb-1">Episode 6</h4>
-                    <p class="text-magenta-gradient fw-bold small mb-0">Text</p>
-                </div>
-            </div>
+<!-- Modal -->
+<div class="modal fade" id="details{{ $d->id }}" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="{{ asset('storage/' . $d->image) }}" class="img-fluid">
+          </div>
+          <div class="col-md-8">
+            <ul class="list-group">
+              <li class="list-group-item"><h3>{{ $d->judul }}</h3></li>
+              <li class="list-group-item">Episode: {{ $d->episode }}</li>
+              <li class="list-group-item">Rilis: {{ $d->rilis }}</li>
+              <li class="list-group-item">Genre: {{ $d->genre }}</li>
+            </ul>
+          </div>
         </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+@endforeach
     </div>
 </div>
