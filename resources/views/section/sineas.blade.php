@@ -11,6 +11,7 @@
         Berikut adalah beberapa daftar film utama dari Miniseri.id
     </p>
 
+
     <div class="row g-4">
         @foreach ($gambar as $g)
             <div class="col-md-4">
@@ -30,35 +31,68 @@
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="details{{ $g->id }}" tabindex="-1">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+    <div class="modal fade" id="details{{ $g->id }}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
 
-                        <div class="modal-header">
-                            <h5 class="modal-title"></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="{{ asset('storage/' . $g->image) }}" class="img-fluid">
-                                </div>
-                                <div class="col-md-8">
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <h3>{{ $g->judul }}</h3>
-                                        </li>
-                                        <li class="list-group-item">Episode: {{ $g->episode }}</li>
-                                        <li class="list-group-item">Rilis: {{ $g->rilis }}</li>
-                                        <li class="list-group-item">Genre: {{ $g->genre }}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
+
+           <div class="modal-body">
+    <div class="container-fluid">
+        <div class="row g-3">
+
+            <!-- Image -->
+            <div class="col-md-4">
+                <img
+                    src="{{ asset('storage/' . $g->image) }}"
+                    class="img-fluid rounded"
+                    alt="{{ $g->judul }}"
+                >
+            </div>
+
+            <!-- Detail -->
+            <div class="col-md-8">
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item">
+                        <h4 class="mb-2">{{ $g->judul }}</h4>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-4 fw-bold">Episode :</div>
+                            <div class="col-8"> {{ $g->episode }}</div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-4 fw-bold">Rilis :</div>
+                            <div class="col-8"> {{ $g->rilis }}</div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-4 fw-bold">Genre :</div>
+                            <div class="col-8"> {{ $g->genre }}</div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</div>
+
         @endforeach
     </div>
 </div>
