@@ -43,7 +43,7 @@
                             <div class="container-fluid">
                                 <div class="row g-3">
                                     <div class="col-md-4">
-                                        <img src="{{ asset('storage/' . $g->image) }}" class="img-fluid rounded"
+                                        <img src="{{ asset('storage/' . $g->image) }}" class="w-100 h-100 object-fit-cover img-fluid rounded"
                                             alt="{{ $g->judul }}">
                                     </div>
 
