@@ -16,7 +16,7 @@
        <div class="menu-inner-shadow"></div>
 
       <ul class="menu-inner py-1">
-    <li class="menu-item {{ request()->routeIs('index', 'pendaftaran*', 'inputSineas*') ? 'active open' : '' }}">
+    <li class="menu-item {{ request()->routeIs('index', 'pendaftaran', 'inputSinea*') ? 'active open' : '' }}">
         <a href="javascript:void(0)" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons ti ti-smart-home"></i>
             <div>Menu</div>
@@ -30,14 +30,14 @@
                 </a>
             </li>
 
-            <li class="menu-item {{ request()->routeIs('pendaftaran*') ? 'active' : '' }}">
+            <li class="menu-item {{ request()->routeIs('pendaftaran') ? 'active' : '' }}">
                <a href="{{ route('pendaftaran') }}" class="menu-link">
                     <div>Data Pendaftaran</div>
                 </a>
             </li>
 
             <li class="menu-item {{ request()->routeIs('inputSinea*') ? 'active' : '' }}">
-                <a href="" class="menu-link">
+                <a href="{{ route('inputSinea') }}" class="menu-link">
                     <div>Input Sineas</div>
                 </a>
             </li>

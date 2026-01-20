@@ -14,12 +14,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Miniseri | Admin</title>
+    <title>@yield('title')</title>
 
     <meta name="description" content="" />
 
     <link rel="icon" href="{{ asset('assets/image/miniseri.png') }}">
-    
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,7 +54,7 @@
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../assets/vendor/css/pages/cards-advance.css" />
 	<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-	
+
 
     <!-- Helpers -->
     <script src="../../assets/vendor/js/helpers.js"></script>

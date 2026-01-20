@@ -60,14 +60,6 @@ class PageController extends Controller
     );
 
     return redirect()->back()->with('success', 'Pendaftaran sineas berhasil!');
-}
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function show()
-    {
-        return view('management.index');
     }
 
     public function sinea()
@@ -76,10 +68,7 @@ class PageController extends Controller
         return view('management.pendaftaran', compact('sinea'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, $id)
+     public function update(Request $request, $id)
     {
         $sinea = Page::find($id);
 

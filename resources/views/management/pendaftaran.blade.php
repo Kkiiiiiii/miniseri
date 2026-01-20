@@ -1,4 +1,5 @@
 @extends('management.layout')
+@section('title', 'Data Pendaftar')
 @section('content')
     <div class="container">
 

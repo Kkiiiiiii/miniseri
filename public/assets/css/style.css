@@ -42,3 +42,15 @@
     border-radius: 15px !important;
     color: #d63384 !important;
 }
+
+.phone-mockup {
+    width: 280px;
+    height: 500px;
+    background: #171717;
+    border-radius: 3rem;
+    border: 8px solid #262626;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    outline: 1px solid rgba(255, 255, 255, 0.1);
+}

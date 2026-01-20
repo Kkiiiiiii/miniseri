@@ -31,68 +31,62 @@
             </div>
 
             <!-- Modal -->
-    <div class="modal fade" id="details{{ $g->id }}" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+            <div class="modal fade" id="details{{ $g->id }}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
 
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-
-           <div class="modal-body">
-    <div class="container-fluid">
-        <div class="row g-3">
-
-            <!-- Image -->
-            <div class="col-md-4">
-                <img
-                    src="{{ asset('storage/' . $g->image) }}"
-                    class="img-fluid rounded"
-                    alt="{{ $g->judul }}"
-                >
-            </div>
-
-            <!-- Detail -->
-            <div class="col-md-8">
-                <ul class="list-group list-group-flush">
-
-                    <li class="list-group-item">
-                        <h4 class="mb-2">{{ $g->judul }}</h4>
-                    </li>
-
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-4 fw-bold">Episode :</div>
-                            <div class="col-8"> {{ $g->episode }}</div>
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
-                    </li>
 
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-4 fw-bold">Rilis :</div>
-                            <div class="col-8"> {{ $g->rilis }}</div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('storage/' . $g->image) }}" class="img-fluid rounded"
+                                            alt="{{ $g->judul }}">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <ul class="list-group list-group-flush">
+
+                                            <li class="list-group-item">
+                                                <h4 class="mb-2">{{ $g->judul }}</h4>
+                                            </li>
+
+                                            <li class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-4 fw-bold">Episode :</div>
+                                                    <div class="col-8"> {{ $g->episode }}</div>
+                                                </div>
+                                            </li>
+
+                                            <li class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-4 fw-bold">Rilis :</div>
+                                                    <div class="col-8"> {{ $g->rilis }}</div>
+                                                </div>
+                                            </li>
+
+                                            <li class="list-group-item">
+                                                <div class="row">
+                                                    <div class="col-4 fw-bold">Genre :</div>
+                                                    <div class="col-8"> {{ $g->genre }}</div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
-                    </li>
-
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-4 fw-bold">Genre :</div>
-                            <div class="col-8"> {{ $g->genre }}</div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                         </div>
-                    </li>
-
-                </ul>
+                    </div>
+                </div>
             </div>
-
-        </div>
-    </div>
-</div>
-
-
-        </div>
-    </div>
-</div>
-
         @endforeach
     </div>
 </div>
