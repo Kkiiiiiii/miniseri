@@ -8,7 +8,7 @@
                 <div class="bg-magenta-gradient mb-4"
                      style="height:4px;width:80px;border-radius:10px;"></div>
 
-                <h4 class="fw-bold text-secondary-emphasis mb-3">
+                <h4 class="fw-bold mb-3">
                     PT MINISERI SETIAP HARI
                 </h4>
 

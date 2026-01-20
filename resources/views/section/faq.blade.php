@@ -51,7 +51,7 @@
 
             <div class="bg-magenta-gradient mx-auto mb-5" style="height:4px;width:80px;border-radius:10px;"></div>
 
-            <h3 class="fw-bold text-secondary-emphasis mb-4">
+            <h3 class="fw-bold mb-4">
                 PERTANYAAN YANG SERING DIAJUKAN
             </h3>
 

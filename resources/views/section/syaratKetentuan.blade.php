@@ -9,7 +9,7 @@
                     <p class="text-magenta-gradient fw-bold text-uppercase small ls-widest mb-2">Term And Condition</p>
                     <div class="mb-4" style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;">
                     </div>
-                    <h3 class="fw-bold text-secondary-emphasis mb-4">Syarat dan Ketentuan Kerja Sama</h3>
+                    <h3 class="fw-bold mb-4">Syarat dan Ketentuan Kerja Sama</h3>
                     <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
                         Harap dibaca dengan cermat sebelum menggunakan layanan kami. Syarat dan ketentuan ini mengatur
                         penggunaan website dan layanan yang disediakan oleh kami untuk memastikan pengalaman yang aman

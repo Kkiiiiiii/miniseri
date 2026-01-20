@@ -3,7 +3,7 @@
             <div class="bg-magenta-gradient mx-auto mb-5"
                 style="height: 4px; width: 80px; background: #d63384; border-radius: 10px;"></div>
 
-            <h3 class="fw-bold text-secondary-emphasis mb-4">Platform Video Potrait Untuk Mini Series Untuk Semua
+            <h3 class="fw-bold  mb-4">Platform Video Potrait Untuk Mini Series Untuk Semua
                 Kalangan</h3>
             <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
                 Miniseri.id adalah platform digital yang didedikasikan untuk film vertikal di Indonesia. Menawarkan
