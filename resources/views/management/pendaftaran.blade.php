@@ -1,5 +1,5 @@
 @extends('management.layout')
-@section('title', 'Data Pendaftar')
+@section('title', 'Miniseri | Data Pendaftaran Sineas')
 @section('content')
     <div class="container">
 

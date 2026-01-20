@@ -1,8 +1,14 @@
 @extends('management.layout')
-@section('title', 'Sinea')
-@section(section: 'content')
+@section('title', 'Miniseri | Sineas')
+@section('content')
     <div class="container">
-          @if (session('success'))
+        <div class="d-flex justify-content-between mb-0">
+            <h4 class="mb-0">Data Sinea</h4>
+            <button type="button" class="btn btn-dark" data-bs-target="#DataAdd" data-bs-toggle="modal">
+                <i class="ti ti-plus me-1"></i>
+                Tambah sinea</button>
+        </div>
+        @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show">
                 {{ session('success') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -19,32 +25,30 @@
             </div>
         @endif
 
-        <div class="row">
-            @foreach ($gambar as $g)
-            <div class="col-md-4">
-                <div class="phone-mockup">
-                    <img src="{{ asset('storage/' . $g->image) }}" class="w-100 h-100 object-fit-cover opacity-75"
-                        alt="Preview">
-                    <div class="position-absolute bottom-0 start-0 p-4 w-100 text-start"
-                        style="background:linear-gradient(transparent,rgba(0,0,0,0.9))">
-                        <h3 class="h6 fw-bold m-0 text-white">{{ $g->judul }}</h3>
-                        <p class="text-magenta-gradient fw-bold mb-0 small">Eps : {{ $g->episode }}</p>
-                        <p class="text-magenta-gradient fw-bold mb-0 small">Rilis : {{ $g->rilis }}</p>
-                        <p class="text-magenta-gradient fw-bold mb-0 small">Genre : {{ $g->genre }}</p>
+        <div class="row g-4 mt-3">
+            @forelse ($gambar as $g)
+                <div class="col-md-4">
+                    <div class="phone-mockup position-relative rounded overflow-hidden">
+                        <img src="{{ asset('storage/' . $g->image) }}" class="w-100 h-100 object-fit-cover opacity-75"
+                            alt="{{ $g->judul }}">
+
+                        <div class="position-absolute bottom-0 start-0 p-3 w-100"
+                            style="background:linear-gradient(transparent,rgba(0,0,0,.85))">
+                            <h6 class="fw-bold text-white mb-1">{{ $g->judul }}</h6>
+                            <small class="text-magenta-gradient">
+                                Episode {{ $g->episode }} • {{ $g->genre }}<br>
+                                Rilis: {{ $g->rilis }}
+                            </small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            @endforeach
-            <div class="col-md-8">
-                <div class="d-flex justify-content-between">
-                    <h4 class="mb-0">Data Sinea</h4>
-                    <button type="button" class="btn btn-dark" data-bs-target="#DataAdd"
-                        data-bs-toggle="modal">
-                        <i class="ti ti-plus me-1"></i>
-                        Tambah sinea</button>
+            @empty
+                <div class="col-12 text-center text-muted py-5">
+                    Belum ada data sinea.
                 </div>
-            </div>
+            @endforelse
         </div>
+
     </div>
 
     <div class="modal fade" id="DataAdd" tabindex="-1">
@@ -53,48 +57,55 @@
                 <div class="modal-body">
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 
-                    <h4 class="text-center mb-4">Tambah Data Sinea</h4>
+                    <div class="text-center">
+                        <h4 class="text-magenta-gradient fw-bold text-uppercase small ls-widest">Tambah Data Sinea</h4>
+                                    <div class="mx-auto mb-4"
+                             style="height:4px;width:80px;background:#d63384;border-radius:10px;">
+                        </div>
+                    </div>
 
                     <form method="POST" action="{{ route('input') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row g-3">
-                            <div class="mb-3">
-                                <label class="form-label" for="image">Gambar</label>
-                                <img src="" width="100" class="mb-2 img-thumbnail " />
-                                <input type="file" class="form-control" name="image" />
+                            <div class="col-md-4 text-center">
+                                <img src="" id="previewGambar" class="img-thumbnail mb-2 d-none" width="150">
+                                <input type="file" class="form-control" name="image" id="inputGambar" accept="image/*">
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Judul</label>
-                                <input type="text" name="judul" class="form-control">
+                            <div class="col-md-8">
+                                <div class="mb-3">
+                                    <label class="form-label">Judul</label>
+                                    <input type="text" name="judul" class="form-control" required>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label class="form-label">Eps</label>
+                                        <input type="text" name="episode" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label class="form-label">Rilis</label>
+                                        <input type="date" name="rilis" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label class="form-label">Genre</label>
+                                        <input type="text" name="genre" class="form-control" required>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Eps</label>
-                                <input type="text" name="episode" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Rilis</label>
-                                <input type="date" name="rilis" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Genre</label>
-                                <input type="text" name="genre" class="form-control">
-                            </div>
-
-
-                            <div class="col-12 text-center mt-3">
-                                <button class="btn btn-primary">Tambah</button>
-                                <button type="button" class="btn btn-label-secondary"
-                                    data-bs-dismiss="modal">Cancel</button>
+                            <div class="col-12 d-grid text-center mt-3">
+                                <button class="btn btn-primary px-4">Tambah</button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
 @endsection
+
+@push('scripts')
+

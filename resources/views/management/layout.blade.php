@@ -132,5 +132,22 @@
 
     <!-- Page JS -->
     <script src="../../assets/js/dashboards-analytics.js"></script>
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const inputGambar = document.getElementById('inputGambar');
+    const previewGambar = document.getElementById('previewGambar');
+
+    inputGambar.addEventListener('change', function () {
+        const file = this.files[0];
+        if (!file) return;
+
+        previewGambar.src = URL.createObjectURL(file);
+        previewGambar.classList.remove('d-none');
+    });
+});
+</script>
+
+
+    @stack('scripts')
   </body>
 </html>
