@@ -56,21 +56,21 @@
 
                                             <li class="list-group-item">
                                                 <div class="row">
-                                                    <div class="col-4 fw-bold">Episode :</div>
+                                                    <div class="col-4 fw-medium">Episode :</div>
                                                     <div class="col-8"> {{ $g->episode }}</div>
                                                 </div>
                                             </li>
 
                                             <li class="list-group-item">
                                                 <div class="row">
-                                                    <div class="col-4 fw-bold">Rilis :</div>
+                                                    <div class="col-4 fw-medium">Rilis :</div>
                                                     <div class="col-8"> {{ $g->rilis }}</div>
                                                 </div>
                                             </li>
 
                                             <li class="list-group-item">
                                                 <div class="row">
-                                                    <div class="col-4 fw-bold">Genre :</div>
+                                                    <div class="col-4 fw-medium">Genre :</div>
                                                     <div class="col-8"> {{ $g->genre }}</div>
                                                 </div>
                                             </li>

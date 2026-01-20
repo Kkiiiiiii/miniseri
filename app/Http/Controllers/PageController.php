@@ -17,7 +17,7 @@ class PageController extends Controller
      */
     public function index()
     {
-        $data['gambar'] = Gambar::all();
+        $data['gambar'] = Gambar::orderBy('id', 'asc')->paginate(3);
         return view( 'home', $data );
     }
 

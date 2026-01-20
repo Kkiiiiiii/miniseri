@@ -123,6 +123,5 @@
                 {{-- {{ $sinea->links()}} --}}
             </div>
         </div>
-
     </div>
 @endsection
