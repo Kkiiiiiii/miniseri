@@ -6,8 +6,7 @@
             <h3 class="fw-bold  mb-4">Platform Video Potrait Untuk Mini Series Untuk Semua
                 Kalangan</h3>
             <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
-                Miniseri.id adalah platform digital yang didedikasikan untuk film vertikal di Indonesia. Menawarkan
-                format unik dimana kisah diceritakan melalui klip pendek.
+                Miniseri.id adalah platform digital yang didedikasikan untuk film vertikal di Indonesia. Menawarkan format unik dimana kisah diceritakan melalui klip pendek yang membentuk narasi lengkap. Fokusnya adalah memberdayakan para pembuat film Indonesia dan menyediakan konten yang menarik dan memikat bagi pemirsa.
             </p>
 
             <div class="row g-4">
