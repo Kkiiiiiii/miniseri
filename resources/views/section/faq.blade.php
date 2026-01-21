@@ -73,57 +73,65 @@
         <details class="faq-item">
             <summary>Bagaimana cara kerja Miniseri.id</summary>
             <p>
-                Pembuat konten dapat mengunggah miniseri atau film bersambung mereka dalam klip berdurasi 2–3 menit.
-                Penonton dapat mengikuti cerita secara berurutan, dan kreator berpeluang mendapatkan monetisasi
-                berdasarkan keterlibatan penonton.
+                Pembuat konten mengunggah miniseri atau film bersambung mereka dalam klip berdurasi 2-3 menit, Penonton bisa melihat klip ini secara berurutan, dan mengikutinya secara berkelanjutan. Platform ini mendukung monetisasi yang mudah bagi pembuat konten berdasarkan minat penonton.
             </p>
         </details>
 
         <details class="faq-item">
-            <summary>Mengapa harus menggunakan format video vertikal?</summary>
+            <summary>Mengapa disini kita harus selalu menggunakan format video vertikal ?</summary>
             <p>
-                Karena format ini ideal untuk layar ponsel, memberikan pengalaman menonton yang nyaman,
-                serta selaras dengan kebiasaan menonton di smartphone saat ini.
+              Karena format ini ideal untuk layar ponsel, memberikan pengalaman menonton yang menyenangkan, dan tentu saja selaras dengan tren menonton di smart phone saat ini.
             </p>
         </details>
 
         <details class="faq-item">
-            <summary>Siapa saja yang dapat menggunakan Miniseri.id?</summary>
+            <summary>Siapa saja yang dapat menggunakan Miniseri.id</summary>
             <p>
-                Miniseri.id terbuka bagi pembuat film, kreator konten, dan siapa pun yang ingin membagikan karya
-                mereka dalam format yang menarik dan mudah diakses oleh penonton.
+              Miniseri. id menyambut para pembuat film, konten kreator, dan siapa saja yang ingin membagikan karyanya dalam format yang menarik dan mudah diakses. Kami juga mementingkan kenyamanan personal penonton dengan memudahkanmu untuk mengikuti series favorit.
             </p>
         </details>
 
         <details class="faq-item">
-            <summary>Bagaimana cara menonton konten di Miniseri.id?</summary>
+            <summary>Bagaimana cara menonton konten di Miniseri.id</summary>
             <p>
-                Kamu dapat menonton konten melalui aplikasi Miniseri.id yang tersedia di App Store dan Google Play,
-                serta menikmati berbagai cerita vertikal langsung dari ponsel.
+                Rasakan sensasi petualangan film mini-seri dalam genggamanmu dengan aplikasi Miniseri.id! Segera unduh aplikasi kami di App Store atau Google Play, dan nikmati beragam konten menarik yang siap menghibur hari-harimu!
             </p>
         </details>
 
         <details class="faq-item">
-            <summary>Bagaimana cara menghasilkan uang dari konten?</summary>
+            <summary>Apakah saya bisa menghasilkan uang dari konten saya di Miniseri. id</summary>
             <p>
-                Kreator dapat memperoleh penghasilan berdasarkan keterlibatan penonton, seperti klik lanjutan
-                episode dan potensi pendapatan iklan di masa mendatang.
+               Ya, Miniseri. id membuka kesempatan emas bagi para kreator untuk memperoleh penghasilan tambahan. Kamu bisa menghasilkan pendapatan berdasarkan dari keterlibatan penonton. Seperti ‘klik’ untuk menonton klip berikutnya atau melalui pendapatan iklan kedepannya. Kami mendukung para pembuat film untuk menghasilkan uang dari kreativitas mereka dan membangun karier yang berkelanjutan di industri perfilman.
             </p>
         </details>
 
         <details class="faq-item">
-            <summary>Apakah penggunaan Miniseri.id berbayar?</summary>
+            <summary>Bagaimana cara penonton terlibat dengan konten di Miniseri.id</summary>
             <p>
-                Miniseri.id menyediakan konten gratis dan berbayar, termasuk sistem koin untuk akses
-                ke konten tertentu guna mendukung kreator favorit.
+                Penonton dapat terlibat dengan konten melalui menonton klip, memberikan like, berbagi, dan mengklik untuk melihat kelanjutan cerita. Dengan format interaktif ini, kita dapat mendorong interaksi yang lebih dalam dan memungkinkan penonton ikut serta dalam pengalaman bercerita.
+            </p>
+        </details>
+
+
+        <details class="faq-item">
+            <summary>Apakah penggunaan Miniseri.id dikenakan biaya</summary>
+            <p>
+                Miniseri.id menyediakan konten gratis dan berbayar, termasuk klip tertentu yang hanya dapat diakses dengan koin. Hal ini memberikan kebebasan kepada penonton untuk menikmati konten dan juga mendukung kreator favorit mereka. Untuk informasi lebih lanjut tentang detail harga, cek info di dalam aplikasi ya!
             </p>
         </details>
 
         <details class="faq-item">
-            <summary>Di mana mendapatkan info terbaru Miniseri.id?</summary>
+            <summary>Bagaimana Miniseri.id mendukung budaya dan komunitas Indonesia</summary>
             <p>
-                Informasi terbaru dapat ditemukan melalui situs resmi www.miniseri.id
-                dan media sosial resmi Miniseri.id.
+                Miniseri.id merayakan keberagaman budaya Indonesia dengan menyediakan platform untuk kreatifitas anak muda indonesia dan menampilkan karya mereka. Menjadi penyemangat bagi para sineas lokal dan komunitas film kecil, menghidupkan kisah-kisah seru, dan ide-ide unik terbaik!
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Dimana saya bisa mendapatkan informasi lebih lanjut mengenai Miniseri.id</summary>
+            <p>
+                Untuk informasi lebih lanjut, pembaruan, dan menjelajahi perpustakaan cerita vertikal Untuk berita terkini, update seru, dan eksplorasi cerita vertikal
+                keren kami, mampir ke situs www.miniseri.id atau kepoin media sosial kami, ya!
             </p>
         </details>
 </div>

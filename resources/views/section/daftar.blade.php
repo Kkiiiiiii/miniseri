@@ -57,16 +57,21 @@
                     </div>
 
                     <h3 class="fw-bold mb-4">
-                        AYO DAFTARKAN DIRI ANDA SEBAGAI SINEAS DI MINISERI.ID
+                        AYO DAFTARKAN DIRI ANDA <br>
+                        SEBAGAI SINEAS DI MINISERI.ID
                     </h3>
 
                     <p class="mb-4">
-                        Dengan mendaftarkan diri anda sebagai sineas di Miniseri.id, Anda dapat menjadi bagian
-                        dari komunitas sineas indonesia yang berdedikasi menghasilkan karya berkualitas dan menarik.
+                        Dengan mendaftarkan diri sebagai sineas di Miniseri.id, Anda <br>
+                        dapat menjadi bagian dari komunitas sineas Indonesia yang <br>
+                        berdedikasi untuk menghasilkan karya-karya berkualitas dan <br>
+                        menarik, serta mendapatkan keuntungan dari hasil karya <br>
+                        yang dihasilkan.
                     </p>
 
                     <p class="mb-5">
-                        Harap dibaca dengan cermat pada syarat dan ketentuan yang berlaku sebelum mendaftar.
+                        Harap dibaca dengan cermat pada syarat dan ketentuan yang <br>
+                        berlaku sebelum mendaftar sebagai sineas miniseri.id.
                     </p>
 
                     <button type="button"
