@@ -62,10 +62,10 @@
                     </h3>
 
                     <p class="mb-4">
-                        Dengan mendaftarkan diri sebagai sineas di Miniseri.id, Anda <br>
-                        dapat menjadi bagian dari komunitas sineas Indonesia yang <br>
-                        berdedikasi untuk menghasilkan karya-karya berkualitas dan <br>
-                        menarik, serta mendapatkan keuntungan dari hasil karya <br>
+                        Dengan mendaftarkan diri sebagai sineas di Miniseri.id, Anda
+                        dapat menjadi bagian dari komunitas sineas Indonesia yang
+                        berdedikasi untuk menghasilkan karya-karya berkualitas dan
+                        menarik, serta mendapatkan keuntungan dari hasil karya
                         yang dihasilkan.
                     </p>
 

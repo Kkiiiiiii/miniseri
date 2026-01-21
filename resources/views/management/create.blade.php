@@ -70,7 +70,7 @@
                         <div class="row g-3">
                             <div class="col-md-4 text-center">
                                 <img src="" id="previewGambar" class="img-thumbnail mb-2 d-none" width="150">
-                                <input type="file" class="form-control" name="image" id="inputGambar" accept="image/*">
+                                <input type="file" class="form-control" name="image" id="inputGambar" accept="image/*" required>
                             </div>
 
                             <div class="col-md-8">
