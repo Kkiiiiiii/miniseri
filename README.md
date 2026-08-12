@@ -28,7 +28,7 @@ This project is a customized web application and landing page redesign for **min
 This application is built using modern web development tools and frameworks:
 
 - **Backend:** PHP / Laravel
-- **Frontend / Styling:** Tailwind CSS / Metronic Tailwind
+- **Frontend / Styling:** Tailwind CSS / Javascript 
 - **Version Control:** Git & GitHub
 
 ---
